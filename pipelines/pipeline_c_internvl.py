@@ -59,7 +59,7 @@ CHUNK_SEC      = 10
 OVERLAP_SEC    = 3
 NUM_FRAMES     = 32      # official benchmark: 16; 32 comfortably fits in 8k ctx
 INPUT_SIZE     = 448     # official tile size
-VALID_LABELS   = {"hand_biting", "head_banging", "hitting_others", "scratching", "none"}
+VALID_LABELS   = {"hand_biting", "head_banging", "hitting_others", "scratching", "self_directed_hit", "none"}
 
 # ─────────────────────────────────────────────────────────
 # 1.  Preprocessing helpers (exact official code)
@@ -320,6 +320,8 @@ ALIASES = {
     "head_scratching": "scratching",     "scratching_scalp": "scratching",
     "scratching_self": "scratching",
     "no_behavior": "none",               "neutral": "none",
+    "self_hit": "self_directed_hit",     "hitting_self": "self_directed_hit",
+    "self_directed_hitting": "self_directed_hit",
 }
 
 def normalize_label(raw):
@@ -328,6 +330,23 @@ def normalize_label(raw):
               .strip(" \t\r\n.,;:!?\"'`()[]{}").replace("-","_").replace(" ","_"))
     if lbl in VALID_LABELS: return lbl
     return ALIASES.get(lbl, "none")
+
+def _parse_time(s):
+    s = s.strip().rstrip("s").strip()
+    if not s: return 0.0
+    if ":" in s:
+        parts = s.split(":")
+        try:
+            if len(parts) == 2:
+                return float(parts[0]) * 60 + float(parts[1])
+            elif len(parts) == 3:
+                return float(parts[0]) * 3600 + float(parts[1]) * 60 + float(parts[2])
+        except ValueError:
+            return 0.0
+    try:
+        return float(s)
+    except ValueError:
+        return 0.0
 
 def parse_chunk_response(text, chunk_duration):
     label = evidence = justification = ""
@@ -341,11 +360,11 @@ def parse_chunk_response(text, chunk_duration):
         elif re.match(r"(?i)^justification\s*:", line):
             justification = re.sub(r"(?i)^justification\s*:\s*", "", line).strip()
         elif re.match(r"(?i)^start\s*:", line):
-            m = re.search(r"[\d.]+", line)
-            if m: start_sec = float(m.group())
+            m = re.search(r"(\d[\d:\.]*)", line)
+            if m: start_sec = _parse_time(m.group(1))
         elif re.match(r"(?i)^end\s*:", line):
-            m = re.search(r"[\d.]+", line)
-            if m: end_sec = float(m.group())
+            m = re.search(r"(\d[\d:\.]*)", line)
+            if m: end_sec = _parse_time(m.group(1))
     if not label:
         m = re.search(r"(?im)^\s*Label\s*:\s*(.+?)\s*$", text)
         if m: label = m.group(1).strip()
@@ -358,11 +377,11 @@ def parse_chunk_response(text, chunk_duration):
         m = re.search(r"(?i)justification\s*:\s*(.+?)(?:\n|$)", text, re.S)
         if m: justification = m.group(1).strip()
     if start_sec == 0.0:
-        m = re.search(r"(?i)start\s*:\s*.*?([\d.]+)", text)
-        if m: start_sec = float(m.group(1))
+        m = re.search(r"(?i)start\s*:\s*(\d[\d:\.]*)", text)
+        if m: start_sec = _parse_time(m.group(1))
     if end_sec == 0.0:
-        m = re.search(r"(?i)end\s*:\s*.*?([\d.]+)", text)
-        if m: end_sec = float(m.group(1))
+        m = re.search(r"(?i)end\s*:\s*(\d[\d:\.]*)", text)
+        if m: end_sec = _parse_time(m.group(1))
 
     raw_label = label
     label     = normalize_label(label)
@@ -385,6 +404,13 @@ def sec_to_ts(sec):
 
 def build_intervals(frame_labels, fps):
     if not frame_labels: return []
+    GAP_FILL = 3
+    sorted_f = sorted(frame_labels.keys())
+    for idx in range(len(sorted_f) - 1):
+        a, b = sorted_f[idx], sorted_f[idx + 1]
+        if 1 < b - a <= GAP_FILL + 1 and frame_labels[a][0] == frame_labels[b][0]:
+            for g in range(a + 1, b):
+                frame_labels[g] = frame_labels[a]
     intervals = []; sf = sorted(frame_labels.keys())
     cl = ce = cj = None; i0 = prev = None
     for f in sf:
@@ -425,14 +451,16 @@ BEHAVIOR_PROMPT = (
     "There may be multiple people in the scene. "
     "Focus on the child patient's body movements and interactions.\n\n"
     "Then classify the child's primary behavior using exactly one of these labels:\n"
-    "[hand_biting, head_banging, hitting_others, scratching, none]\n\n"
+    "[hand_biting, head_banging, hitting_others, scratching, self_directed_hit, none]\n\n"
     "Brief definitions:\n"
     "- hand_biting: child bites own hand/fingers/wrist\n"
     "- head_banging: child hits own head against surface or table or object\n"
     "- hitting_others: child hits/slaps/pushes another person\n"
     "- scratching: child scratches own head/scalp/skin\n"
+    "- self_directed_hit: child hits/slaps their own body (arm, leg, torso - not head)\n"
     "- none: none of the above\n\n"
-    "If behavior is visible, estimate when it starts and ends (in seconds).\n\n"
+    "If behavior is visible, report the EARLIEST second the behavior first appears and when it ends.\n"
+    "Use plain seconds only (e.g. Start: 3.5) — do NOT use HH:MM:SS format.\n\n"
     "Reply in this exact format:\n"
     "Evidence: <one sentence describing what you see>\n"
     "Label: <one label>\n"
@@ -500,14 +528,53 @@ def classify_chunk(chunk):
     return result
 
 # ─────────────────────────────────────────────────────────
-# 9.  Main loop
+# 9.  Resume: load already-processed chunks from log
 # ─────────────────────────────────────────────────────────
+all_logs     = []
+done_indices = set()
+if os.path.exists(LOG_PATH):
+    try:
+        with open(LOG_PATH) as fp:
+            all_logs = json.load(fp)
+        done_indices = {entry["chunk_idx"] for entry in all_logs}
+        print(f"[RESUME] Found existing log with {len(done_indices)} processed chunks.")
+    except Exception as e:
+        print(f"[RESUME] Could not load existing log ({e}), starting fresh.")
+        all_logs = []; done_indices = set()
+
 frame_labels    = {}
-all_logs        = []
 behavior_chunks = []
 
+for entry in all_logs:
+    if entry.get("label", "none") != "none":
+        matching = next((c for c in chunk_info if c["chunk_idx"] == entry["chunk_idx"]), None)
+        if matching:
+            b_start = max(0.0, matching["actual_global_start"] + entry["start_sec"])
+            b_end   = min(duration_sec, matching["actual_global_start"] + entry["end_sec"])
+            b_sf    = max(0, int(round(b_start * fps)))
+            b_ef    = min(total_frames, int(round(b_end * fps)))
+            for f in range(b_sf, b_ef):
+                frame_labels[f] = (entry["label"], entry["evidence"], entry["justification"])
+            behavior_chunks.append({
+                "chunk_idx": entry["chunk_idx"],
+                "requested_start": entry["requested_start"],
+                "requested_end":   entry["requested_end"],
+                "label":           entry["label"],
+                "global_start":    round(b_start, 2),
+                "global_end":      round(b_end, 2),
+                "global_start_timestamp": sec_to_ts(b_start),
+                "global_end_timestamp":   sec_to_ts(b_end),
+                "evidence":      entry["evidence"],
+                "justification": entry["justification"],
+            })
+
+# ─────────────────────────────────────────────────────────
+# 10.  Main loop
+# ─────────────────────────────────────────────────────────
 for chunk in chunk_info:
     i                   = chunk["chunk_idx"]
+    if i in done_indices:
+        continue
     sf                  = chunk["sf"]
     ef                  = chunk["ef"]
     actual_duration     = chunk["actual_duration"]
@@ -544,9 +611,7 @@ for chunk in chunk_info:
             "evidence":      result["evidence"],
             "justification": result["justification"],
         })
-    # NOTE: when this chunk is "none" we do NOT delete overlap-region positives.
-    # Positive always beats none — a later none must never erase an already
-    # detected positive event.
+    # Positive always beats none — none never erases an already-marked frame.
 
     all_logs.append({
         "chunk_idx": i,
@@ -557,9 +622,9 @@ for chunk in chunk_info:
         "actual_duration":     actual_duration,
         **result,
     })
+    with open(LOG_PATH, "w") as fp:
+        json.dump(all_logs, fp, indent=2)
 
-with open(LOG_PATH, "w") as fp:
-    json.dump(all_logs, fp, indent=2)
 print(f"\nChunk log -> {LOG_PATH}")
 
 # ─────────────────────────────────────────────────────────
@@ -636,10 +701,11 @@ print(f"\nSummary -> {SUMMARY_PATH}")
 # ─────────────────────────────────────────────────────────
 print(f"\nAnnotating video -> {OUTPUT_PATH}")
 LABEL_COLORS = {
-    "hand_biting":    (0,   0, 255),
-    "head_banging":   (0, 128, 255),
-    "hitting_others": (0,   0, 200),
-    "scratching":     (0, 165, 255),
+    "hand_biting":       (0,   0, 255),
+    "head_banging":      (0, 128, 255),
+    "hitting_others":    (0,   0, 200),
+    "scratching":        (0, 165, 255),
+    "self_directed_hit": (0, 255, 128),
 }
 cap = cv2.VideoCapture(VIDEO_PATH)
 if not cap.isOpened():

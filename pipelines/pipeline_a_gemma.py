@@ -211,6 +211,14 @@ def sec_to_ts(sec):
 
 def build_intervals(frame_labels, fps):
     if not frame_labels: return []
+    # Fill same-label gaps of ≤3 frames (~100ms at 30fps) from chunk boundary rounding
+    GAP_FILL = 3
+    sorted_f = sorted(frame_labels.keys())
+    for idx in range(len(sorted_f) - 1):
+        a, b = sorted_f[idx], sorted_f[idx + 1]
+        if 1 < b - a <= GAP_FILL + 1 and frame_labels[a][0] == frame_labels[b][0]:
+            for g in range(a + 1, b):
+                frame_labels[g] = frame_labels[a]
     intervals = []; sf = sorted(frame_labels.keys())
     cl = ce = cj = None; i0 = prev = None
     for f in sf:
@@ -320,7 +328,7 @@ def make_prompt(chunk_dur):
         "- none: none of the above\n\n"
         f"This clip is {chunk_dur:.1f} seconds long.\n"
         "Use your reasoning to determine the most accurate label.\n"
-        "If behavior is visible, estimate when it starts and ends "
+        "If behavior is visible, report the EARLIEST second the behavior first appears and when it ends "
         "(in plain seconds, e.g. Start: 3.5  — do NOT use HH:MM:SS format).\n\n"
         "Reply in this exact format:\n"
         "Evidence: <one sentence describing what you see>\n"
@@ -391,14 +399,53 @@ def classify_chunk(chunk):
     return result
 
 # ─────────────────────────────────────────────────────────
-# 8.  Main loop
+# 8.  Resume: load already-processed chunks from log
 # ─────────────────────────────────────────────────────────
+all_logs     = []
+done_indices = set()
+if os.path.exists(LOG_PATH):
+    try:
+        with open(LOG_PATH) as fp:
+            all_logs = json.load(fp)
+        done_indices = {entry["chunk_idx"] for entry in all_logs}
+        print(f"[RESUME] Found existing log with {len(done_indices)} processed chunks.")
+    except Exception as e:
+        print(f"[RESUME] Could not load existing log ({e}), starting fresh.")
+        all_logs = []; done_indices = set()
+
 frame_labels    = {}
-all_logs        = []
 behavior_chunks = []
 
+for entry in all_logs:
+    if entry.get("label", "none") != "none":
+        matching = next((c for c in chunk_info if c["chunk_idx"] == entry["chunk_idx"]), None)
+        if matching:
+            b_start = max(0.0, matching["actual_global_start"] + entry["start_sec"])
+            b_end   = min(duration_sec, matching["actual_global_start"] + entry["end_sec"])
+            b_sf    = max(0, int(round(b_start * fps)))
+            b_ef    = min(total_frames, int(round(b_end * fps)))
+            for f in range(b_sf, b_ef):
+                frame_labels[f] = (entry["label"], entry["evidence"], entry["justification"])
+            behavior_chunks.append({
+                "chunk_idx": entry["chunk_idx"],
+                "requested_start": entry["requested_start"],
+                "requested_end":   entry["requested_end"],
+                "label":           entry["label"],
+                "global_start":    round(b_start, 2),
+                "global_end":      round(b_end, 2),
+                "global_start_timestamp": sec_to_ts(b_start),
+                "global_end_timestamp":   sec_to_ts(b_end),
+                "evidence":      entry["evidence"],
+                "justification": entry["justification"],
+            })
+
+# ─────────────────────────────────────────────────────────
+# 9.  Main loop
+# ─────────────────────────────────────────────────────────
 for chunk in chunk_info:
     i                   = chunk["chunk_idx"]
+    if i in done_indices:
+        continue
     sf                  = chunk["sf"]
     actual_duration     = chunk["actual_duration"]
     actual_global_start = chunk["actual_global_start"]
@@ -445,9 +492,9 @@ for chunk in chunk_info:
         "actual_duration":     actual_duration,
         **result,
     })
+    with open(LOG_PATH, "w") as fp:
+        json.dump(all_logs, fp, indent=2)
 
-with open(LOG_PATH, "w") as fp:
-    json.dump(all_logs, fp, indent=2)
 print(f"\nChunk log -> {LOG_PATH}")
 
 # ─────────────────────────────────────────────────────────

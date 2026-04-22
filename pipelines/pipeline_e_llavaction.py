@@ -155,6 +155,23 @@ def normalize_label(raw):
     if lbl in VALID_LABELS: return lbl
     return ALIASES.get(lbl, "none")
 
+def _parse_time(s):
+    s = s.strip().rstrip("s").strip()
+    if not s: return 0.0
+    if ":" in s:
+        parts = s.split(":")
+        try:
+            if len(parts) == 2:
+                return float(parts[0]) * 60 + float(parts[1])
+            elif len(parts) == 3:
+                return float(parts[0]) * 3600 + float(parts[1]) * 60 + float(parts[2])
+        except ValueError:
+            return 0.0
+    try:
+        return float(s)
+    except ValueError:
+        return 0.0
+
 def parse_chunk_response(text, chunk_duration):
     label = evidence = justification = ""
     start_sec = end_sec = 0.0
@@ -167,11 +184,11 @@ def parse_chunk_response(text, chunk_duration):
         elif re.match(r"(?i)^justification\s*:", line):
             justification = re.sub(r"(?i)^justification\s*:\s*", "", line).strip()
         elif re.match(r"(?i)^start\s*:", line):
-            m = re.search(r"[\d.]+", line)
-            if m: start_sec = float(m.group())
+            m = re.search(r"(\d[\d:\.]*)", line)
+            if m: start_sec = _parse_time(m.group(1))
         elif re.match(r"(?i)^end\s*:", line):
-            m = re.search(r"[\d.]+", line)
-            if m: end_sec = float(m.group())
+            m = re.search(r"(\d[\d:\.]*)", line)
+            if m: end_sec = _parse_time(m.group(1))
     if not label:
         m = re.search(r"(?im)^\s*Label\s*:\s*(.+?)\s*$", text)
         if m: label = m.group(1).strip()
@@ -183,11 +200,11 @@ def parse_chunk_response(text, chunk_duration):
         m = re.search(r"(?i)justification\s*:\s*(.+?)(?:\n|$)", text, re.S)
         if m: justification = m.group(1).strip()
     if start_sec == 0.0:
-        m = re.search(r"(?i)start\s*:\s*.*?([\d.]+)", text)
-        if m: start_sec = float(m.group(1))
+        m = re.search(r"(?i)start\s*:\s*(\d[\d:\.]*)", text)
+        if m: start_sec = _parse_time(m.group(1))
     if end_sec == 0.0:
-        m = re.search(r"(?i)end\s*:\s*.*?([\d.]+)", text)
-        if m: end_sec = float(m.group(1))
+        m = re.search(r"(?i)end\s*:\s*(\d[\d:\.]*)", text)
+        if m: end_sec = _parse_time(m.group(1))
     raw_label = label
     label = normalize_label(label)
     if raw_label and label != "none" and raw_label.lower().strip() != label:
@@ -209,6 +226,13 @@ def sec_to_ts(sec):
 
 def build_intervals(frame_labels, fps):
     if not frame_labels: return []
+    GAP_FILL = 3
+    sorted_f = sorted(frame_labels.keys())
+    for idx in range(len(sorted_f) - 1):
+        a, b = sorted_f[idx], sorted_f[idx + 1]
+        if 1 < b - a <= GAP_FILL + 1 and frame_labels[a][0] == frame_labels[b][0]:
+            for g in range(a + 1, b):
+                frame_labels[g] = frame_labels[a]
     intervals = []; sf = sorted(frame_labels.keys())
     cl = ce = cj = None; i0 = prev = None
     for f in sf:
@@ -317,7 +341,8 @@ def make_prompt(chunk_dur):
         "- self_directed_hit: child hits/slaps their own body (arm, leg, torso - not head)\n"
         "- none: none of the above\n\n"
         f"This clip is {chunk_dur:.1f} seconds long.\n"
-        "If behavior is visible, estimate when it starts and ends (in seconds).\n\n"
+        "If behavior is visible, report the EARLIEST second the behavior first appears and when it ends.\n"
+        "Use plain seconds only (e.g. Start: 3.5) — do NOT use HH:MM:SS format.\n\n"
         "Reply in this exact format:\n"
         "Evidence: <one sentence describing what you see>\n"
         "Label: <one label>\n"
