@@ -1,0 +1,82 @@
+============================================================
+BEHAVIOUR DETECTION SUMMARY -- Perception-LM-8B
+============================================================
+Video   : /raid/aio469/asd_sib_detector/data/raw/lab_videos/input_01.mp4
+Duration: 00:45:56.27  (2756.3s)
+FPS     : 30.00
+Chunks  : 690  (5s each, 1s overlap, 4s stride, 32 frames/chunk)
+
+  9 interval(s) detected  (58.2s total, 2.1% of video)
+
+  Label breakdown:
+    hand_biting          2 interval(s)
+    hitting_others       1 interval(s)
+    self_directed_hit    6 interval(s)
+
+  Intervals (global time):
+    [00:10:19.93 -> 00:10:24.93]  SELF DIRECTED HIT  (5.0s)
+      Evidence:      The child is sitting on a chair and then leans back.
+      Justification: The child is sitting on a chair and then leans back.
+    [00:13:19.73 -> 00:13:25.00]  SELF DIRECTED HIT  (5.3s)
+      Evidence:      A woman is sitting in a chair and then picks up a shoe
+      Justification: The woman is sitting in a chair and then picks up a shoe.
+    [00:15:16.37 -> 00:15:17.00]  SELF DIRECTED HIT  (0.6s)
+      Evidence:      The child stands up from the chair.
+      Justification: The child is standing up from the chair.
+    [00:19:58.63 -> 00:20:05.00]  SELF DIRECTED HIT  (6.4s)
+      Evidence:      A child walks into a room and sits down at a table.
+      Justification: The child walks into the room and sits down at the table.
+    [00:21:19.23 -> 00:21:25.00]  SELF DIRECTED HIT  (5.8s)
+      Evidence:      The child is sitting in a chair with his back to the camera, and he is moving hi
+      Justification: The child is moving his hands and head.
+    [00:27:39.50 -> 00:27:52.73]  HITTING OTHERS  (13.2s)
+      Evidence:      A woman is pushing a chair to the door.
+      Justification: The woman is pushing the chair to the door.
+    [00:34:59.67 -> 00:35:09.00]  HAND BITING  (9.3s)
+      Evidence:      The child is sitting on a chair and moving his hands
+      Justification: The child is sitting on a chair and moving his hands.
+    [00:40:34.50 -> 00:40:41.00]  HAND BITING  (6.5s)
+      Evidence:      A child is standing in a doorway with a woman and then walks into the room
+      Justification: The child is biting their fingers.
+    [00:40:46.87 -> 00:40:53.00]  SELF DIRECTED HIT  (6.1s)
+      Evidence:      A child is sitting on a chair and then he is sitting on a chair and then he is p
+      Justification: The child is sitting on a chair and then he is sitting on a chair and then he is
+
+------------------------------------------------------------
+CHUNK-LEVEL DETECTIONS (12):
+  Chunk 0155  [00:10:19.93 -> 00:10:24.93]  SELF DIRECTED HIT
+    Evidence:      The child is sitting on a chair and then leans back.
+    Justification: The child is sitting on a chair and then leans back.
+  Chunk 0200  [00:13:19.74 -> 00:13:25.00]  SELF DIRECTED HIT
+    Evidence:      A woman is sitting in a chair and then picks up a shoe
+    Justification: The woman is sitting in a chair and then picks up a shoe.
+  Chunk 0228  [00:15:16.36 -> 00:15:17.00]  SELF DIRECTED HIT
+    Evidence:      The child stands up from the chair.
+    Justification: The child is standing up from the chair.
+  Chunk 0300  [00:19:58.62 -> 00:20:05.00]  SELF DIRECTED HIT
+    Evidence:      A child walks into a room and sits down at a table.
+    Justification: The child walks into the room and sits down at the table.
+  Chunk 0320  [00:21:19.23 -> 00:21:25.00]  SELF DIRECTED HIT
+    Evidence:      The child is sitting in a chair with his back to the camera, and he is moving hi
+    Justification: The child is moving his hands and head.
+  Chunk 0415  [00:27:39.49 -> 00:27:45.00]  HITTING OTHERS
+    Evidence:      A woman is pushing a chair to the door.
+    Justification: The woman is pushing the chair to the door.
+  Chunk 0416  [00:27:43.62 -> 00:27:49.00]  HITTING OTHERS
+    Evidence:      A woman is helping a child to stand up from a chair.
+    Justification: The woman is helping the child to stand up from the chair.
+  Chunk 0417  [00:27:47.74 -> 00:27:52.74]  HITTING OTHERS
+    Evidence:      A woman is pushing a child in a chair out of the room
+    Justification: The woman is pushing the child in the chair out of the room.
+  Chunk 0525  [00:34:59.68 -> 00:35:05.00]  HAND BITING
+    Evidence:      The child is sitting on a chair and moving his hands
+    Justification: The child is sitting on a chair and moving his hands.
+  Chunk 0526  [00:35:03.81 -> 00:35:09.00]  HAND BITING
+    Evidence:      The child is sitting on a chair and is biting his fingers
+    Justification: The child is biting his fingers.
+  Chunk 0609  [00:40:34.50 -> 00:40:41.00]  HAND BITING
+    Evidence:      A child is standing in a doorway with a woman and then walks into the room
+    Justification: The child is biting their fingers.
+  Chunk 0612  [00:40:46.88 -> 00:40:53.00]  SELF DIRECTED HIT
+    Evidence:      A child is sitting on a chair and then he is sitting on a chair and then he is p
+    Justification: The child is sitting on a chair and then he is sitting on a chair and then he is

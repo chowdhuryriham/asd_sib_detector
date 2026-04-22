@@ -1,0 +1,219 @@
+{
+  "video": "/raid/aio469/asd_sib_detector/data/raw/lab_videos/input_01.mp4",
+  "model": "InternVL2-Llama3-76B",
+  "duration_sec": 2756.27,
+  "duration_timestamp": "00:45:56.27",
+  "fps": 30.0,
+  "total_frames": 82688,
+  "chunk_settings": {
+    "chunk_sec": 10,
+    "overlap_sec": 3,
+    "total_chunks": 394,
+    "num_frames_per_chunk": 32
+  },
+  "summary": {
+    "total_behavior_intervals": 8,
+    "total_behavior_seconds": 18.0,
+    "behavior_percentage": 0.65,
+    "label_counts": {
+      "hitting_others": 7,
+      "head_banging": 1
+    }
+  },
+  "behavior_chunks": [
+    {
+      "chunk_idx": 64,
+      "requested_start": 448.0,
+      "requested_end": 458.0,
+      "label": "hitting_others",
+      "global_start": 449.33,
+      "global_end": 451.33,
+      "global_start_timestamp": "00:07:29.33",
+      "global_end_timestamp": "00:07:31.33",
+      "evidence": "The child patient walks into the room, interacts with the adult, and then hits the adult.",
+      "justification": "The child is seen hitting the adult, which matches the \"hitting_others\" label."
+    },
+    {
+      "chunk_idx": 130,
+      "requested_start": 910.0,
+      "requested_end": 920.0,
+      "label": "hitting_others",
+      "global_start": 912.28,
+      "global_end": 914.28,
+      "global_start_timestamp": "00:15:12.28",
+      "global_end_timestamp": "00:15:14.28",
+      "evidence": "The child patient is seen standing up and hitting the adult sitting on the chair.",
+      "justification": "The child is hitting another person, which matches the \"hitting_others\" label."
+    },
+    {
+      "chunk_idx": 170,
+      "requested_start": 1190.0,
+      "requested_end": 1200.0,
+      "label": "hitting_others",
+      "global_start": 1189.29,
+      "global_end": 1191.29,
+      "global_start_timestamp": "00:19:49.29",
+      "global_end_timestamp": "00:19:51.29",
+      "evidence": "The child enters the room, walks towards the table, and then hits the other person.",
+      "justification": "The child is seen hitting another person in the room."
+    },
+    {
+      "chunk_idx": 180,
+      "requested_start": 1260.0,
+      "requested_end": 1270.0,
+      "label": "hitting_others",
+      "global_start": 1265.56,
+      "global_end": 1267.56,
+      "global_start_timestamp": "00:21:05.56",
+      "global_end_timestamp": "00:21:07.56",
+      "evidence": "The child patient is seen raising his hand and hitting the woman in the gray shirt.",
+      "justification": "The child's action of hitting the woman in the gray shirt is captured in the video."
+    },
+    {
+      "chunk_idx": 182,
+      "requested_start": 1274.0,
+      "requested_end": 1284.0,
+      "label": "hitting_others",
+      "global_start": 1281.02,
+      "global_end": 1283.02,
+      "global_start_timestamp": "00:21:21.02",
+      "global_end_timestamp": "00:21:23.02",
+      "evidence": "The child is seen hitting the woman in the green shirt.",
+      "justification": "The child's action of hitting the woman in the green shirt is captured in the video."
+    },
+    {
+      "chunk_idx": 196,
+      "requested_start": 1372.0,
+      "requested_end": 1382.0,
+      "label": "hitting_others",
+      "global_start": 1371.14,
+      "global_end": 1372.14,
+      "global_start_timestamp": "00:22:51.14",
+      "global_end_timestamp": "00:22:52.14",
+      "evidence": "The child patient is seen raising his hand and hitting the other person (the woman in the gray shirt) sitting next to him.",
+      "justification": "The child's action of hitting the other person is clearly visible in the video."
+    },
+    {
+      "chunk_idx": 307,
+      "requested_start": 2149.0,
+      "requested_end": 2159.0,
+      "label": "hitting_others",
+      "global_start": 2153.23,
+      "global_end": 2155.23,
+      "global_start_timestamp": "00:35:53.23",
+      "global_end_timestamp": "00:35:55.23",
+      "evidence": "The child patient is seen hitting the other person at the table.",
+      "justification": "The child is observed hitting another person, which matches the definition of hitting_others."
+    },
+    {
+      "chunk_idx": 360,
+      "requested_start": 2520.0,
+      "requested_end": 2530.0,
+      "label": "head_banging",
+      "global_start": 2524.23,
+      "global_end": 2529.23,
+      "global_start_timestamp": "00:42:04.23",
+      "global_end_timestamp": "00:42:09.23",
+      "evidence": "The child is seen bending forward and hitting their head against the table.",
+      "justification": "The child's action of hitting their head against the table fits the definition of head_banging."
+    }
+  ],
+  "intervals": [
+    {
+      "label": "hitting_others",
+      "start_frame": 13480,
+      "end_frame": 13539,
+      "start_sec": 449.33,
+      "end_sec": 451.33,
+      "start_timestamp": "00:07:29.33",
+      "end_timestamp": "00:07:31.33",
+      "duration_sec": 2.0,
+      "evidence": "The child patient walks into the room, interacts with the adult, and then hits the adult.",
+      "justification": "The child is seen hitting the adult, which matches the \"hitting_others\" label."
+    },
+    {
+      "label": "hitting_others",
+      "start_frame": 27368,
+      "end_frame": 27427,
+      "start_sec": 912.27,
+      "end_sec": 914.27,
+      "start_timestamp": "00:15:12.27",
+      "end_timestamp": "00:15:14.27",
+      "duration_sec": 2.0,
+      "evidence": "The child patient is seen standing up and hitting the adult sitting on the chair.",
+      "justification": "The child is hitting another person, which matches the \"hitting_others\" label."
+    },
+    {
+      "label": "hitting_others",
+      "start_frame": 35679,
+      "end_frame": 35738,
+      "start_sec": 1189.3,
+      "end_sec": 1191.3,
+      "start_timestamp": "00:19:49.30",
+      "end_timestamp": "00:19:51.30",
+      "duration_sec": 2.0,
+      "evidence": "The child enters the room, walks towards the table, and then hits the other person.",
+      "justification": "The child is seen hitting another person in the room."
+    },
+    {
+      "label": "hitting_others",
+      "start_frame": 37967,
+      "end_frame": 38026,
+      "start_sec": 1265.57,
+      "end_sec": 1267.57,
+      "start_timestamp": "00:21:05.57",
+      "end_timestamp": "00:21:07.57",
+      "duration_sec": 2.0,
+      "evidence": "The child patient is seen raising his hand and hitting the woman in the gray shirt.",
+      "justification": "The child's action of hitting the woman in the gray shirt is captured in the video."
+    },
+    {
+      "label": "hitting_others",
+      "start_frame": 38431,
+      "end_frame": 38490,
+      "start_sec": 1281.03,
+      "end_sec": 1283.03,
+      "start_timestamp": "00:21:21.03",
+      "end_timestamp": "00:21:23.03",
+      "duration_sec": 2.0,
+      "evidence": "The child is seen hitting the woman in the green shirt.",
+      "justification": "The child's action of hitting the woman in the green shirt is captured in the video."
+    },
+    {
+      "label": "hitting_others",
+      "start_frame": 41134,
+      "end_frame": 41163,
+      "start_sec": 1371.13,
+      "end_sec": 1372.13,
+      "start_timestamp": "00:22:51.13",
+      "end_timestamp": "00:22:52.13",
+      "duration_sec": 1.0,
+      "evidence": "The child patient is seen raising his hand and hitting the other person (the woman in the gray shirt) sitting next to him.",
+      "justification": "The child's action of hitting the other person is clearly visible in the video."
+    },
+    {
+      "label": "hitting_others",
+      "start_frame": 64597,
+      "end_frame": 64656,
+      "start_sec": 2153.23,
+      "end_sec": 2155.23,
+      "start_timestamp": "00:35:53.23",
+      "end_timestamp": "00:35:55.23",
+      "duration_sec": 2.0,
+      "evidence": "The child patient is seen hitting the other person at the table.",
+      "justification": "The child is observed hitting another person, which matches the definition of hitting_others."
+    },
+    {
+      "label": "head_banging",
+      "start_frame": 75727,
+      "end_frame": 75876,
+      "start_sec": 2524.23,
+      "end_sec": 2529.23,
+      "start_timestamp": "00:42:04.23",
+      "end_timestamp": "00:42:09.23",
+      "duration_sec": 5.0,
+      "evidence": "The child is seen bending forward and hitting their head against the table.",
+      "justification": "The child's action of hitting their head against the table fits the definition of head_banging."
+    }
+  ]
+}

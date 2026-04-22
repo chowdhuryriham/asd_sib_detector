@@ -1,0 +1,26 @@
+# Models — too large for GitHub
+models/
+
+# Raw video input
+data/raw/lab_videos/
+
+# Virtual environments
+venvs/
+
+# Chunk temp files and annotated output videos
+outputs/*/chunks/
+outputs/*/chunk_debug_frames/
+outputs/*/*.mp4
+
+# Logs can be optionally excluded if large
+# logs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# System files
+.DS_Store
+*.egg-info/

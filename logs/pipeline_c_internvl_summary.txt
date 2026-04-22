@@ -1,0 +1,66 @@
+============================================================
+BEHAVIOUR DETECTION SUMMARY -- InternVL2-Llama3-76B
+============================================================
+Video   : /raid/aio469/asd_sib_detector/data/raw/lab_videos/input_01.mp4
+Duration: 00:45:56.27  (2756.3s)
+FPS     : 30.00
+Chunks  : 394  (32 frames each)
+
+  8 interval(s) detected  (18.0s total, 0.7% of video)
+
+  Label breakdown:
+    head_banging         1 interval(s)
+    hitting_others       7 interval(s)
+
+  Intervals (global time):
+    [00:07:29.33 -> 00:07:31.33]  HITTING OTHERS  (2.0s)
+      Evidence:      The child patient walks into the room, interacts with the adult, and then hits t
+      Justification: The child is seen hitting the adult, which matches the "hitting_others" label.
+    [00:15:12.27 -> 00:15:14.27]  HITTING OTHERS  (2.0s)
+      Evidence:      The child patient is seen standing up and hitting the adult sitting on the chair
+      Justification: The child is hitting another person, which matches the "hitting_others" label.
+    [00:19:49.30 -> 00:19:51.30]  HITTING OTHERS  (2.0s)
+      Evidence:      The child enters the room, walks towards the table, and then hits the other pers
+      Justification: The child is seen hitting another person in the room.
+    [00:21:05.57 -> 00:21:07.57]  HITTING OTHERS  (2.0s)
+      Evidence:      The child patient is seen raising his hand and hitting the woman in the gray shi
+      Justification: The child's action of hitting the woman in the gray shirt is captured in the vid
+    [00:21:21.03 -> 00:21:23.03]  HITTING OTHERS  (2.0s)
+      Evidence:      The child is seen hitting the woman in the green shirt.
+      Justification: The child's action of hitting the woman in the green shirt is captured in the vi
+    [00:22:51.13 -> 00:22:52.13]  HITTING OTHERS  (1.0s)
+      Evidence:      The child patient is seen raising his hand and hitting the other person (the wom
+      Justification: The child's action of hitting the other person is clearly visible in the video.
+    [00:35:53.23 -> 00:35:55.23]  HITTING OTHERS  (2.0s)
+      Evidence:      The child patient is seen hitting the other person at the table.
+      Justification: The child is observed hitting another person, which matches the definition of hi
+    [00:42:04.23 -> 00:42:09.23]  HEAD BANGING  (5.0s)
+      Evidence:      The child is seen bending forward and hitting their head against the table.
+      Justification: The child's action of hitting their head against the table fits the definition o
+
+------------------------------------------------------------
+CHUNK-LEVEL DETECTIONS (8):
+  Chunk 0064  [00:07:29.33 -> 00:07:31.33]  HITTING OTHERS
+    Evidence:      The child patient walks into the room, interacts with the adult, and then hits t
+    Justification: The child is seen hitting the adult, which matches the "hitting_others" label.
+  Chunk 0130  [00:15:12.28 -> 00:15:14.28]  HITTING OTHERS
+    Evidence:      The child patient is seen standing up and hitting the adult sitting on the chair
+    Justification: The child is hitting another person, which matches the "hitting_others" label.
+  Chunk 0170  [00:19:49.29 -> 00:19:51.29]  HITTING OTHERS
+    Evidence:      The child enters the room, walks towards the table, and then hits the other pers
+    Justification: The child is seen hitting another person in the room.
+  Chunk 0180  [00:21:05.56 -> 00:21:07.56]  HITTING OTHERS
+    Evidence:      The child patient is seen raising his hand and hitting the woman in the gray shi
+    Justification: The child's action of hitting the woman in the gray shirt is captured in the vid
+  Chunk 0182  [00:21:21.02 -> 00:21:23.02]  HITTING OTHERS
+    Evidence:      The child is seen hitting the woman in the green shirt.
+    Justification: The child's action of hitting the woman in the green shirt is captured in the vi
+  Chunk 0196  [00:22:51.14 -> 00:22:52.14]  HITTING OTHERS
+    Evidence:      The child patient is seen raising his hand and hitting the other person (the wom
+    Justification: The child's action of hitting the other person is clearly visible in the video.
+  Chunk 0307  [00:35:53.23 -> 00:35:55.23]  HITTING OTHERS
+    Evidence:      The child patient is seen hitting the other person at the table.
+    Justification: The child is observed hitting another person, which matches the definition of hi
+  Chunk 0360  [00:42:04.23 -> 00:42:09.23]  HEAD BANGING
+    Evidence:      The child is seen bending forward and hitting their head against the table.
+    Justification: The child's action of hitting their head against the table fits the definition o

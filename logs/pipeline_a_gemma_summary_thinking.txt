@@ -1,0 +1,246 @@
+============================================================
+BEHAVIOUR DETECTION SUMMARY -- Gemma-4-31B
+============================================================
+Video   : /raid/aio469/asd_sib_detector/data/raw/lab_videos/input_01.mp4
+Duration: 00:45:56.27  (2756.3s)
+FPS     : 30.00
+Chunks  : 690  (5s each, 1s overlap, 4s stride)
+
+  36 interval(s) detected  (80.3s total, 2.9% of video)
+
+  Label breakdown:
+    hand_biting          20 interval(s)
+    head_banging         1 interval(s)
+    hitting_others       4 interval(s)
+    scratching           4 interval(s)
+    self_directed_hit    7 interval(s)
+
+  Intervals (global time):
+    [00:08:52.07 -> 00:08:54.07]  HAND BITING  (2.0s)
+      Evidence:      The child patient places their fingers in their mouth and appears to be biting t
+      Justification: The child is seen putting their hand/fingers into their mouth and biting them du
+    [00:09:09.70 -> 00:09:11.40]  HAND BITING  (1.7s)
+      Evidence:      The child puts their hand to their mouth and bows their head for a few seconds.
+      Justification: The child is seen placing their hand in their mouth and holding it there.
+    [00:10:02.80 -> 00:10:05.00]  SELF DIRECTED HIT  (2.2s)
+      Evidence:      The child patient uses their right hand to repeatedly hit their own left thigh s
+      Justification: The child is hitting their own leg, which fits the definition of a self-directed
+    [00:10:35.27 -> 00:10:36.97]  SELF DIRECTED HIT  (1.7s)
+      Evidence:      The child patient repeatedly hits their own left thigh with their right hand sta
+      Justification: The child is seen slapping their own leg, which fits the definition of a self-di
+    [00:10:44.90 -> 00:10:46.50]  HAND BITING  (1.6s)
+      Evidence:      The child brings their hand to their mouth and bites down on their fingers.
+      Justification: The child is seen biting their own hand/fingers during this interval.
+    [00:12:59.93 -> 00:13:00.43]  SELF DIRECTED HIT  (0.5s)
+      Evidence:      The child enters the room and hits their own thigh with their hand.
+      Justification: The child hits their own leg, which is a self-directed hit.
+    [00:13:23.73 -> 00:13:25.00]  HAND BITING  (1.3s)
+      Evidence:      The child raises their right hand to their mouth and bites their fingers towards
+      Justification: The child is observed biting their own hand/fingers, which fits the definition o
+    [00:13:50.83 -> 00:13:53.87]  HAND BITING  (3.0s)
+      Evidence:      The child patient leans forward and puts their fingers in their mouth to bite th
+      Justification: The child is observed biting their own fingers starting around 4.2 seconds and c
+    [00:14:49.57 -> 00:14:52.07]  HAND BITING  (2.5s)
+      Evidence:      The child leans forward and places their hand/wrist in their mouth.
+      Justification: The child is observed biting their own hand during this interval.
+    [00:15:12.23 -> 00:15:13.00]  SELF DIRECTED HIT  (0.8s)
+      Evidence:      The child patient leans forward and hits their own lap/thigh with their right ha
+      Justification: The child performs a sudden striking motion with their hand against their own th
+    [00:15:14.37 -> 00:15:15.37]  HITTING OTHERS  (1.0s)
+      Evidence:      The child raises their right arm and strikes the adult sitting next to them.
+      Justification: The child is seen hitting the person sitting to their right.
+    [00:15:39.20 -> 00:15:43.70]  HAND BITING  (4.5s)
+      Evidence:      The child brings their left hand to their mouth and bites their fingers througho
+      Justification: The child is observed biting their own hand/fingers from approximately 1.0 to 5.
+    [00:20:00.50 -> 00:20:01.00]  HAND BITING  (0.5s)
+      Evidence:      The child puts his fingers into his mouth and appears to bite them while leaning
+      Justification: The child is observed placing his hand in his mouth and biting his fingers.
+    [00:20:51.23 -> 00:20:51.73]  HAND BITING  (0.5s)
+      Evidence:      The child brings their hand to their mouth and bites their fingers briefly aroun
+      Justification: The child is observed putting their fingers in their mouth and biting them.
+    [00:21:01.37 -> 00:21:02.77]  SCRATCHING  (1.4s)
+      Evidence:      The child raises their hand and scratches their head/scalp.
+      Justification: The child is seen using their hand to scratch their own head.
+    [00:21:04.70 -> 00:21:06.20]  HITTING OTHERS  (1.5s)
+      Evidence:      The child in the brown jacket reaches out and hits the woman in the grey shirt o
+      Justification: The child is seen striking the other person with their hand.
+    [00:21:23.23 -> 00:21:28.97]  SCRATCHING  (5.7s)
+      Evidence:      The child raises their right hand and scratches the top of their head.
+      Justification: The child is seen scratching their scalp with their hand.
+    [00:21:34.60 -> 00:21:37.00]  SCRATCHING  (2.4s)
+      Evidence:      The child raises their right hand to their head and begins scratching their scal
+      Justification: The child is seen scratching their own head/scalp.
+    [00:21:51.20 -> 00:21:57.00]  HAND BITING  (5.8s)
+      Evidence:      The child puts their right hand and fingers into their mouth.
+      Justification: The child is observed placing their fingers in their mouth and maintaining this 
+    [00:35:32.70 -> 00:35:34.70]  HITTING OTHERS  (2.0s)
+      Evidence:      The child in the tan jacket reaches out and hits the person in the grey shirt se
+      Justification: The child is seen striking another person with their hand.
+    [00:35:44.57 -> 00:35:47.57]  HAND BITING  (3.0s)
+      Evidence:      The child in the brown jacket puts their hand in their mouth and bites it for se
+      Justification: The child is observed biting their own hand/fingers.
+    [00:36:44.50 -> 00:36:49.00]  HAND BITING  (4.5s)
+      Evidence:      The child brings their hand to their mouth and appears to be biting their finger
+      Justification: The child puts their hand in their mouth and maintains the position, which is co
+    [00:36:50.13 -> 00:36:53.00]  HAND BITING  (2.9s)
+      Evidence:      The child puts their hand in their mouth and bites it starting at around 3 secon
+      Justification: The child is observed biting their own hand/fingers.
+    [00:37:00.57 -> 00:37:04.97]  HAND BITING  (4.4s)
+      Evidence:      The child puts their right hand to their mouth and appears to be biting their fi
+      Justification: The child's hand is consistently in their mouth, which fits the definition of ha
+    [00:40:27.07 -> 00:40:28.97]  HAND BITING  (1.9s)
+      Evidence:      The child puts their hand in their mouth and bites their fingers starting around
+      Justification: The child is observed biting their own hand/fingers for the final two seconds of
+    [00:40:30.20 -> 00:40:33.00]  HAND BITING  (2.8s)
+      Evidence:      The child puts their hand in their mouth and bites it after being hugged by the 
+      Justification: The child is seen biting their own hand starting at 4 seconds and continuing unt
+    [00:40:35.33 -> 00:40:37.00]  SELF DIRECTED HIT  (1.7s)
+      Evidence:      The child in the yellow shirt repeatedly hits their own chest and torso.
+      Justification: The child is slapping their own torso, which matches the definition of a self-di
+    [00:40:38.63 -> 00:40:41.63]  HAND BITING  (3.0s)
+      Evidence:      The child puts their hand in their mouth and chews on their fingers from the beg
+      Justification: The child is observed placing their hand in their mouth and biting their own fin
+    [00:41:43.37 -> 00:41:44.97]  HAND BITING  (1.6s)
+      Evidence:      The child patient raises their right hand to their mouth and bites their fingers
+      Justification: The child is observed bringing their hand to their mouth and biting their finger
+    [00:41:53.03 -> 00:41:54.53]  HEAD BANGING  (1.5s)
+      Evidence:      The child lowers their head and repeatedly bangs it against the table surface.
+      Justification: The child is observed hitting their own head against a table.
+    [00:43:19.67 -> 00:43:20.97]  HAND BITING  (1.3s)
+      Evidence:      The child brings their hand to their mouth and bites their fingers starting arou
+      Justification: The child is seen biting their own hand/fingers.
+    [00:43:36.27 -> 00:43:37.27]  HITTING OTHERS  (1.0s)
+      Evidence:      The child reaches out and strikes the woman sitting next to them on the arm.
+      Justification: The child clearly hits the adult woman, fitting the definition of hitting_others
+    [00:44:02.07 -> 00:44:04.97]  SCRATCHING  (2.9s)
+      Evidence:      The child reaches up and scratches their head starting at approximately 3 second
+      Justification: The child is observed scratching their own head/scalp.
+    [00:44:08.37 -> 00:44:09.37]  SELF DIRECTED HIT  (1.0s)
+      Evidence:      The child raises their right arm and hits their own chest.
+      Justification: The child strikes their own torso with their hand, fitting the definition of a s
+    [00:44:16.60 -> 00:44:19.60]  HAND BITING  (3.0s)
+      Evidence:      The child puts their hand in their mouth and bites their fingers from approximat
+      Justification: The child is observed biting their own hand/fingers.
+    [00:45:02.50 -> 00:45:03.80]  SELF DIRECTED HIT  (1.3s)
+      Evidence:      The child patient leans forward and hits their own leg several times with their 
+      Justification: The child is observed hitting their own thigh, which fits the definition of a se
+
+------------------------------------------------------------
+CHUNK-LEVEL DETECTIONS (39):
+  Chunk 0133  [00:08:52.07 -> 00:08:54.07]  HAND BITING
+    Evidence:      The child patient places their fingers in their mouth and appears to be biting t
+    Justification: The child is seen putting their hand/fingers into their mouth and biting them du
+  Chunk 0137  [00:09:09.72 -> 00:09:11.41]  HAND BITING
+    Evidence:      The child puts their hand to their mouth and bows their head for a few seconds.
+    Justification: The child is seen placing their hand in their mouth and holding it there.
+  Chunk 0150  [00:10:02.79 -> 00:10:05.00]  SELF DIRECTED HIT
+    Evidence:      The child patient uses their right hand to repeatedly hit their own left thigh s
+    Justification: The child is hitting their own leg, which fits the definition of a self-directed
+  Chunk 0158  [00:10:35.27 -> 00:10:36.97]  SELF DIRECTED HIT
+    Evidence:      The child patient repeatedly hits their own left thigh with their right hand sta
+    Justification: The child is seen slapping their own leg, which fits the definition of a self-di
+  Chunk 0161  [00:10:44.89 -> 00:10:46.49]  HAND BITING
+    Evidence:      The child brings their hand to their mouth and bites down on their fingers.
+    Justification: The child is seen biting their own hand/fingers during this interval.
+  Chunk 0194  [00:12:59.94 -> 00:13:00.44]  SELF DIRECTED HIT
+    Evidence:      The child enters the room and hits their own thigh with their hand.
+    Justification: The child hits their own leg, which is a self-directed hit.
+  Chunk 0200  [00:13:23.74 -> 00:13:25.00]  HAND BITING
+    Evidence:      The child raises their right hand to their mouth and bites their fingers towards
+    Justification: The child is observed biting their own hand/fingers, which fits the definition o
+  Chunk 0207  [00:13:50.82 -> 00:13:53.00]  HAND BITING
+    Evidence:      The child patient leans forward and puts their fingers in their mouth to bite th
+    Justification: The child is observed biting their own fingers starting around 4.2 seconds and c
+  Chunk 0208  [00:13:51.95 -> 00:13:53.85]  HAND BITING
+    Evidence:      The child leans forward and puts their hand in their mouth, biting it for severa
+    Justification: The child's body movement clearly shows them bringing their hand to their mouth 
+  Chunk 0222  [00:14:49.56 -> 00:14:52.06]  HAND BITING
+    Evidence:      The child leans forward and places their hand/wrist in their mouth.
+    Justification: The child is observed biting their own hand during this interval.
+  Chunk 0227  [00:15:12.23 -> 00:15:13.00]  SELF DIRECTED HIT
+    Evidence:      The child patient leans forward and hits their own lap/thigh with their right ha
+    Justification: The child performs a sudden striking motion with their hand against their own th
+  Chunk 0228  [00:15:14.36 -> 00:15:15.36]  HITTING OTHERS
+    Evidence:      The child raises their right arm and strikes the adult sitting next to them.
+    Justification: The child is seen hitting the person sitting to their right.
+  Chunk 0235  [00:15:39.21 -> 00:15:43.71]  HAND BITING
+    Evidence:      The child brings their left hand to their mouth and bites their fingers througho
+    Justification: The child is observed biting their own hand/fingers from approximately 1.0 to 5.
+  Chunk 0299  [00:20:00.50 -> 00:20:01.00]  HAND BITING
+    Evidence:      The child puts his fingers into his mouth and appears to bite them while leaning
+    Justification: The child is observed placing his hand in his mouth and biting his fingers.
+  Chunk 0312  [00:20:51.24 -> 00:20:51.74]  HAND BITING
+    Evidence:      The child brings their hand to their mouth and bites their fingers briefly aroun
+    Justification: The child is observed putting their fingers in their mouth and biting them.
+  Chunk 0315  [00:21:01.36 -> 00:21:02.76]  SCRATCHING
+    Evidence:      The child raises their hand and scratches their head/scalp.
+    Justification: The child is seen using their hand to scratch their own head.
+  Chunk 0316  [00:21:04.69 -> 00:21:06.19]  HITTING OTHERS
+    Evidence:      The child in the brown jacket reaches out and hits the woman in the grey shirt o
+    Justification: The child is seen striking the other person with their hand.
+  Chunk 0320  [00:21:23.23 -> 00:21:25.00]  SCRATCHING
+    Evidence:      The child raises their right hand and scratches the top of their head.
+    Justification: The child is seen scratching their scalp with their hand.
+  Chunk 0321  [00:21:23.86 -> 00:21:28.96]  SCRATCHING
+    Evidence:      The child patient repeatedly uses their hand to scratch and rub their head throu
+    Justification: The child is observed scratching their own scalp/head with their fingers.
+  Chunk 0323  [00:21:34.62 -> 00:21:37.00]  SCRATCHING
+    Evidence:      The child raises their right hand to their head and begins scratching their scal
+    Justification: The child is seen scratching their own head/scalp.
+  Chunk 0328  [00:21:51.21 -> 00:21:57.00]  HAND BITING
+    Evidence:      The child puts their right hand and fingers into their mouth.
+    Justification: The child is observed placing their fingers in their mouth and maintaining this 
+  Chunk 0533  [00:35:32.69 -> 00:35:34.69]  HITTING OTHERS
+    Evidence:      The child in the tan jacket reaches out and hits the person in the grey shirt se
+    Justification: The child is seen striking another person with their hand.
+  Chunk 0536  [00:35:44.57 -> 00:35:47.57]  HAND BITING
+    Evidence:      The child in the brown jacket puts their hand in their mouth and bites it for se
+    Justification: The child is observed biting their own hand/fingers.
+  Chunk 0551  [00:36:44.51 -> 00:36:49.00]  HAND BITING
+    Evidence:      The child brings their hand to their mouth and appears to be biting their finger
+    Justification: The child puts their hand in their mouth and maintains the position, which is co
+  Chunk 0552  [00:36:50.14 -> 00:36:53.00]  HAND BITING
+    Evidence:      The child puts their hand in their mouth and bites it starting at around 3 secon
+    Justification: The child is observed biting their own hand/fingers.
+  Chunk 0555  [00:37:00.55 -> 00:37:04.95]  HAND BITING
+    Evidence:      The child puts their right hand to their mouth and appears to be biting their fi
+    Justification: The child's hand is consistently in their mouth, which fits the definition of ha
+  Chunk 0606  [00:40:27.08 -> 00:40:28.98]  HAND BITING
+    Evidence:      The child puts their hand in their mouth and bites their fingers starting around
+    Justification: The child is observed biting their own hand/fingers for the final two seconds of
+  Chunk 0607  [00:40:30.21 -> 00:40:33.00]  HAND BITING
+    Evidence:      The child puts their hand in their mouth and bites it after being hugged by the 
+    Justification: The child is seen biting their own hand starting at 4 seconds and continuing unt
+  Chunk 0608  [00:40:35.34 -> 00:40:37.00]  SELF DIRECTED HIT
+    Evidence:      The child in the yellow shirt repeatedly hits their own chest and torso.
+    Justification: The child is slapping their own torso, which matches the definition of a self-di
+  Chunk 0609  [00:40:39.50 -> 00:40:41.00]  HAND BITING
+    Evidence:      The child brings his hand to his mouth and bites his fingers starting at 5 secon
+    Justification: The child is observed putting his hand in his mouth and biting it.
+  Chunk 0610  [00:40:38.62 -> 00:40:41.62]  HAND BITING
+    Evidence:      The child puts their hand in their mouth and chews on their fingers from the beg
+    Justification: The child is observed placing their hand in their mouth and biting their own fin
+  Chunk 0625  [00:41:43.36 -> 00:41:44.96]  HAND BITING
+    Evidence:      The child patient raises their right hand to their mouth and bites their fingers
+    Justification: The child is observed bringing their hand to their mouth and biting their finger
+  Chunk 0628  [00:41:53.04 -> 00:41:54.54]  HEAD BANGING
+    Evidence:      The child lowers their head and repeatedly bangs it against the table surface.
+    Justification: The child is observed hitting their own head against a table.
+  Chunk 0649  [00:43:19.68 -> 00:43:20.98]  HAND BITING
+    Evidence:      The child brings their hand to their mouth and bites their fingers starting arou
+    Justification: The child is seen biting their own hand/fingers.
+  Chunk 0654  [00:43:36.27 -> 00:43:37.27]  HITTING OTHERS
+    Evidence:      The child reaches out and strikes the woman sitting next to them on the arm.
+    Justification: The child clearly hits the adult woman, fitting the definition of hitting_others
+  Chunk 0660  [00:44:02.07 -> 00:44:04.97]  SCRATCHING
+    Evidence:      The child reaches up and scratches their head starting at approximately 3 second
+    Justification: The child is observed scratching their own head/scalp.
+  Chunk 0662  [00:44:08.36 -> 00:44:09.36]  SELF DIRECTED HIT
+    Evidence:      The child raises their right arm and hits their own chest.
+    Justification: The child strikes their own torso with their hand, fitting the definition of a s
+  Chunk 0664  [00:44:16.62 -> 00:44:19.62]  HAND BITING
+    Evidence:      The child puts their hand in their mouth and bites their fingers from approximat
+    Justification: The child is observed biting their own hand/fingers.
+  Chunk 0675  [00:45:02.51 -> 00:45:03.81]  SELF DIRECTED HIT
+    Evidence:      The child patient leans forward and hits their own leg several times with their 
+    Justification: The child is observed hitting their own thigh, which fits the definition of a se

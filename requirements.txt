@@ -1,0 +1,19 @@
+# Install from source — required for latest model support
+# pip install git+https://github.com/huggingface/transformers.git
+
+accelerate>=1.13.0
+opencv-python>=4.13.0
+static-ffmpeg>=3.0
+Pillow>=12.0.0
+numpy>=1.17
+
+# Pipeline E (LLaVAction)
+# pip install git+https://github.com/AdaptiveMotorControlLab/LLaVAction.git
+
+# Pipeline F (PLM)
+timm>=1.0.0
+av>=17.0.0
+soundfile  # Phi-4 only
+
+# For h220six (x86_64) only — no ARM64 wheel
+# decord>=0.6.0  -- replaced by OpenCV on DGX Spark ARM64

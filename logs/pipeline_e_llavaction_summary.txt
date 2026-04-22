@@ -1,0 +1,341 @@
+============================================================
+BEHAVIOUR DETECTION SUMMARY -- LLaVAction-7B
+============================================================
+Video   : /raid/aio469/asd_sib_detector/data/raw/lab_videos/input_01.mp4
+Duration: 00:45:56.27  (2756.3s)
+FPS     : 30.00
+Chunks  : 690  (32 frames each)
+
+  52 interval(s) detected  (128.7s total, 4.7% of video)
+
+  Label breakdown:
+    hand_biting          3 interval(s)
+    hitting_others       30 interval(s)
+    scratching           8 interval(s)
+    self_directed_hit    11 interval(s)
+
+  Intervals (global time):
+    [00:07:55.30 -> 00:07:59.30]  HAND BITING  (4.0s)
+      Evidence:      The child in the brown jacket is seen with their hands near their mouth, suggest
+      Justification: The child's behavior of having their hands near their mouth and the context of t
+    [00:09:08.60 -> 00:09:11.60]  SELF DIRECTED HIT  (3.0s)
+      Evidence:      The child is seen leaning forward and reaching towards the adult on the right, p
+      Justification: The child's actions suggest they are hitting or tapping their own body, which al
+    [00:09:17.87 -> 00:09:19.87]  SELF DIRECTED HIT  (2.0s)
+      Evidence:      The child in the gray jacket is seen bending down and interacting with the child
+      Justification: The child in the gray jacket is seen bending down and interacting with the child
+    [00:10:34.43 -> 00:10:40.43]  HITTING OTHERS  (6.0s)
+      Evidence:      The child is sitting on a chair with their legs extended and feet being manipula
+      Justification: The child is interacting with another person, who is manipulating their feet, in
+    [00:11:11.50 -> 00:11:12.50]  HITTING OTHERS  (1.0s)
+      Evidence:      The child in the brown jacket is seen moving around, standing up, and interactin
+      Justification: The child's movements and interactions with the adults suggest a more active and
+    [00:11:32.80 -> 00:11:33.30]  HITTING OTHERS  (0.5s)
+      Evidence:      A child wearing a blue shirt and brown pants enters the room
+      Justification: The child is seen interacting with another person, possibly hitting or pushing t
+    [00:12:59.07 -> 00:13:03.07]  HITTING OTHERS  (4.0s)
+      Evidence:      The child moves around the room, interacting with the adult and the environment
+      Justification: The child is seen moving around the room, interacting with the adult and the env
+    [00:13:33.07 -> 00:13:35.07]  SCRATCHING  (2.0s)
+      Evidence:      The child in the brown jacket is seen moving their hands and body, possibly indi
+      Justification: The child's hand movements and occasional looking down and back up suggest they 
+    [00:13:38.20 -> 00:13:38.70]  SCRATCHING  (0.5s)
+      Evidence:      The child is seen scratching their head and face during the interaction
+      Justification: The child's hand movements indicate they are scratching themselves, which is con
+    [00:13:40.63 -> 00:13:43.03]  SCRATCHING  (2.4s)
+      Evidence:      The child is seen scratching their head and face during the interaction
+      Justification: The child's hand movements indicate they are scratching themselves, which is con
+    [00:14:23.80 -> 00:14:28.80]  SELF DIRECTED HIT  (5.0s)
+      Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-direc
+      Justification: The child's movements and the adults' interactions suggest that the child might 
+    [00:14:48.57 -> 00:14:50.57]  SELF DIRECTED HIT  (2.0s)
+      Evidence:      The child in the middle is seen leaning forward and reaching towards the adult o
+      Justification: The child's actions suggest they are interacting with the laptop or the adult's 
+    [00:15:11.37 -> 00:15:16.37]  HITTING OTHERS  (5.0s)
+      Evidence:      The child in the brown jacket is seen moving their arms and body, indicating a s
+      Justification: The child's actions suggest they are interacting with the other two individuals,
+    [00:15:54.77 -> 00:16:00.77]  HITTING OTHERS  (6.0s)
+      Evidence:      The child in the brown hoodie is seen moving their head and body, indicating som
+      Justification: The child's movements and the adults' reactions suggest that the child might be 
+    [00:16:07.13 -> 00:16:12.13]  SCRATCHING  (5.0s)
+      Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-sooth
+      Justification: The child's movements suggest they are scratching themselves, which is a common 
+    [00:16:18.43 -> 00:16:19.43]  HITTING OTHERS  (1.0s)
+      Evidence:      The child in the brown jacket is seen moving around, standing up, and shifting p
+      Justification: The child's frequent movements and interactions suggest they might be engaging w
+    [00:16:26.67 -> 00:16:27.67]  SELF DIRECTED HIT  (1.0s)
+      Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-direc
+      Justification: The child's movements and the context of the room suggest that they are engaging
+    [00:16:34.00 -> 00:16:38.00]  HITTING OTHERS  (4.0s)
+      Evidence:      The child in the brown jacket is seen moving around, interacting with the adults
+      Justification: The child in the brown jacket is seen moving around, interacting with the adults
+    [00:18:32.80 -> 00:18:35.80]  HITTING OTHERS  (3.0s)
+      Evidence:      A child wearing a yellow shirt enters the room
+      Justification: The child walks towards the table and interacts with the items on it, possibly h
+    [00:18:47.57 -> 00:18:47.87]  HITTING OTHERS  (0.3s)
+      Evidence:      A child wearing a yellow shirt and blue pants enters the room
+      Justification: The child interacts with another person who is partially visible in the doorway
+    [00:19:24.50 -> 00:19:27.50]  HITTING OTHERS  (3.0s)
+      Evidence:      A child wearing a blue shirt and jeans enters the room, followed by an adult in 
+      Justification: The child appears to be interacting with the adult, possibly hitting or pushing 
+    [00:19:57.00 -> 00:19:57.50]  SELF DIRECTED HIT  (0.5s)
+      Evidence:      A child enters the room, walks towards the table, and sits down
+      Justification: The child is seen sitting on the floor, possibly hitting or scratching themselve
+    [00:19:59.63 -> 00:20:02.63]  SELF DIRECTED HIT  (3.0s)
+      Evidence:      The child is seen moving around the room, interacting with the adults. The child
+      Justification: The child's actions are repetitive and focused on self-harm, which aligns with t
+    [00:20:35.67 -> 00:20:36.17]  HITTING OTHERS  (0.5s)
+      Evidence:      A child wearing a green shirt and blue jeans enters the room
+      Justification: The child appears to be interacting with someone off-screen, possibly hitting or
+    [00:21:03.07 -> 00:21:03.27]  HITTING OTHERS  (0.2s)
+      Evidence:      The child in the brown jacket raises their hand, possibly to get the attention o
+      Justification: The child in the brown jacket raises their hand, which could be interpreted as a
+    [00:21:04.70 -> 00:21:06.20]  HITTING OTHERS  (1.5s)
+      Evidence:      The child in the brown jacket raises their arm and points towards the person in 
+      Justification: The child in the brown jacket raises their arm and points towards the person in 
+    [00:21:09.10 -> 00:21:16.93]  HITTING OTHERS  (7.8s)
+      Evidence:      The child in the brown jacket is seen moving their arms and body, indicating som
+      Justification: The child in the brown jacket is interacting with the person on the right, who i
+    [00:21:18.77 -> 00:21:19.27]  HITTING OTHERS  (0.5s)
+      Evidence:      The child in the brown jacket is seen raising their hand, possibly to interact w
+      Justification: The child's action of raising their hand suggests they might be trying to hit or
+    [00:21:45.97 -> 00:21:56.20]  SCRATCHING  (10.2s)
+      Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-sooth
+      Justification: The child's hand movements suggest they are scratching themselves
+    [00:22:01.50 -> 00:22:02.50]  SCRATCHING  (1.0s)
+      Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-sooth
+      Justification: The child's hand movements suggest they are scratching themselves
+    [00:22:06.63 -> 00:22:07.63]  HITTING OTHERS  (1.0s)
+      Evidence:      The child is leaning forward and appears to be engaged in an activity on the tab
+      Justification: The child's posture and focus suggest they are interacting with something or som
+    [00:22:19.00 -> 00:22:20.00]  SCRATCHING  (1.0s)
+      Evidence:      The child in the brown jacket is seen moving their hands and body, possibly indi
+      Justification: The child's hand movements suggest they might be scratching themselves, which al
+    [00:22:53.13 -> 00:22:54.13]  HITTING OTHERS  (1.0s)
+      Evidence:      The child in the brown jacket is seen moving their arms and body, possibly indic
+      Justification: The child's movements and interactions suggest they are reaching out towards the
+    [00:22:55.27 -> 00:22:57.27]  HITTING OTHERS  (2.0s)
+      Evidence:      The child in the gray shirt is seen moving their head and arm, possibly hitting 
+      Justification: The child in the gray shirt is seen moving their head and arm, possibly hitting 
+    [00:23:06.57 -> 00:23:07.57]  SELF DIRECTED HIT  (1.0s)
+      Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-direc
+      Justification: The child's movements are directed towards themselves, indicating a self-directe
+    [00:23:45.97 -> 00:23:52.97]  HITTING OTHERS  (7.0s)
+      Evidence:      The child in the brown coat is seen moving their head and body, indicating some 
+      Justification: The child's movements and the adults' interactions suggest that the child might 
+    [00:33:47.23 -> 00:33:47.73]  HITTING OTHERS  (0.5s)
+      Evidence:      A child wearing a green shirt and brown pants enters the room
+      Justification: The child is seen interacting with the person in the turquoise shirt, possibly h
+    [00:33:54.50 -> 00:33:55.50]  SELF DIRECTED HIT  (1.0s)
+      Evidence:      The child is seen moving around the room, interacting with the adults and the ta
+      Justification: The child's actions, such as moving around and interacting with the table, sugge
+    [00:34:14.17 -> 00:34:15.07]  SCRATCHING  (0.9s)
+      Evidence:      The child in the brown jacket is sitting on a blue chair, facing away from the c
+      Justification: The child's posture and hand movements suggest they might be scratching or inter
+    [00:35:05.80 -> 00:35:07.80]  HITTING OTHERS  (2.0s)
+      Evidence:      The child in the brown jacket is seen holding a small object, possibly a toy or 
+      Justification: The child in the brown jacket is interacting with the adult in the gray sweater,
+    [00:35:07.93 -> 00:35:11.93]  HITTING OTHERS  (4.0s)
+      Evidence:      The child in the brown jacket is seen moving their hands and arms, possibly indi
+      Justification: The child's movements and the adults' interactions suggest that the child might 
+    [00:35:33.20 -> 00:35:35.60]  HITTING OTHERS  (2.4s)
+      Evidence:      The child in the brown jacket raises their hand and places it on the back of the
+      Justification: The child's action of placing their hand on the adult's back and the subsequent 
+    [00:35:53.37 -> 00:35:55.37]  HITTING OTHERS  (2.0s)
+      Evidence:      The child in the gray shirt is seen placing their hands on the shoulders of the 
+      Justification: The child in the gray shirt is seen placing their hands on the shoulders of the 
+    [00:36:44.00 -> 00:36:47.00]  HITTING OTHERS  (3.0s)
+      Evidence:      The child is seen holding a white object, possibly a cup or container, and appea
+      Justification: The child's actions suggest they are interacting with someone or something off-s
+    [00:41:46.80 -> 00:41:52.80]  HAND BITING  (6.0s)
+      Evidence:      The child is engaged in an activity that involves leaning forward and interactin
+      Justification: The child's posture and the context suggest they might be biting their own hand 
+    [00:42:26.87 -> 00:42:27.27]  HAND BITING  (0.4s)
+      Evidence:      The child is engaged in an activity with the adults, possibly involving their ha
+      Justification: The child's hands are visible and appear to be moving in a way that suggests the
+    [00:43:35.03 -> 00:43:35.43]  HITTING OTHERS  (0.4s)
+      Evidence:      The child raises their arm
+      Justification: The child raises their arm, possibly to hit or gesture towards the adult on the 
+    [00:43:36.27 -> 00:43:37.37]  SELF DIRECTED HIT  (1.1s)
+      Evidence:      The child is seen raising their arm and moving it in a circular motion, which is
+      Justification: The child's actions are focused on their own body, indicating they are hitting o
+    [00:44:08.37 -> 00:44:11.37]  HITTING OTHERS  (3.0s)
+      Evidence:      The child in the brown jacket is seen raising their arm and moving it around, po
+      Justification: The child's movements and the adults' interactions suggest that the child might 
+    [00:44:22.73 -> 00:44:23.73]  SELF DIRECTED HIT  (1.0s)
+      Evidence:      The child is seen moving their hands and arms, possibly indicating a state of re
+      Justification: The child's movements and the adults' interactions suggest that the child might 
+    [00:45:23.67 -> 00:45:24.67]  HITTING OTHERS  (1.0s)
+      Evidence:      The child in the gray shirt is seen hitting the other child
+      Justification: The child in the gray shirt is seen hitting the other child
+    [00:45:27.80 -> 00:45:28.80]  HITTING OTHERS  (1.0s)
+      Evidence:      The child in the brown hoodie is seen bending forward, possibly engaging with so
+      Justification: The child in the brown hoodie appears to be hitting or pushing the child in the 
+
+------------------------------------------------------------
+CHUNK-LEVEL DETECTIONS (55):
+  Chunk 0119  [00:07:55.30 -> 00:07:59.30]  HAND BITING
+    Evidence:      The child in the brown jacket is seen with their hands near their mouth, suggest
+    Justification: The child's behavior of having their hands near their mouth and the context of t
+  Chunk 0137  [00:09:08.62 -> 00:09:11.62]  SELF DIRECTED HIT
+    Evidence:      The child is seen leaning forward and reaching towards the adult on the right, p
+    Justification: The child's actions suggest they are hitting or tapping their own body, which al
+  Chunk 0139  [00:09:17.87 -> 00:09:19.87]  SELF DIRECTED HIT
+    Evidence:      The child in the gray jacket is seen bending down and interacting with the child
+    Justification: The child in the gray jacket is seen bending down and interacting with the child
+  Chunk 0159  [00:10:34.43 -> 00:10:40.43]  HITTING OTHERS
+    Evidence:      The child is sitting on a chair with their legs extended and feet being manipula
+    Justification: The child is interacting with another person, who is manipulating their feet, in
+  Chunk 0167  [00:11:11.49 -> 00:11:12.49]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen moving around, standing up, and interactin
+    Justification: The child's movements and interactions with the adults suggest a more active and
+  Chunk 0173  [00:11:32.81 -> 00:11:33.31]  HITTING OTHERS
+    Evidence:      A child wearing a blue shirt and brown pants enters the room
+    Justification: The child is seen interacting with another person, possibly hitting or pushing t
+  Chunk 0195  [00:12:59.07 -> 00:13:03.07]  HITTING OTHERS
+    Evidence:      The child moves around the room, interacting with the adult and the environment
+    Justification: The child is seen moving around the room, interacting with the adult and the env
+  Chunk 0203  [00:13:33.08 -> 00:13:35.08]  SCRATCHING
+    Evidence:      The child in the brown jacket is seen moving their hands and body, possibly indi
+    Justification: The child's hand movements and occasional looking down and back up suggest they 
+  Chunk 0204  [00:13:38.21 -> 00:13:38.71]  SCRATCHING
+    Evidence:      The child is seen scratching their head and face during the interaction
+    Justification: The child's hand movements indicate they are scratching themselves, which is con
+  Chunk 0205  [00:13:40.64 -> 00:13:43.04]  SCRATCHING
+    Evidence:      The child is seen scratching their head and face during the interaction
+    Justification: The child's hand movements indicate they are scratching themselves, which is con
+  Chunk 0216  [00:14:23.81 -> 00:14:28.81]  SELF DIRECTED HIT
+    Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-direc
+    Justification: The child's movements and the adults' interactions suggest that the child might 
+  Chunk 0222  [00:14:48.56 -> 00:14:50.56]  SELF DIRECTED HIT
+    Evidence:      The child in the middle is seen leaning forward and reaching towards the adult o
+    Justification: The child's actions suggest they are interacting with the laptop or the adult's 
+  Chunk 0228  [00:15:11.36 -> 00:15:16.36]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen moving their arms and body, indicating a s
+    Justification: The child's actions suggest they are interacting with the other two individuals,
+  Chunk 0239  [00:15:54.75 -> 00:16:00.75]  HITTING OTHERS
+    Evidence:      The child in the brown hoodie is seen moving their head and body, indicating som
+    Justification: The child's movements and the adults' reactions suggest that the child might be 
+  Chunk 0242  [00:16:07.14 -> 00:16:12.14]  SCRATCHING
+    Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-sooth
+    Justification: The child's movements suggest they are scratching themselves, which is a common 
+  Chunk 0244  [00:16:18.42 -> 00:16:19.42]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen moving around, standing up, and shifting p
+    Justification: The child's frequent movements and interactions suggest they might be engaging w
+  Chunk 0246  [00:16:26.68 -> 00:16:27.68]  SELF DIRECTED HIT
+    Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-direc
+    Justification: The child's movements and the context of the room suggest that they are engaging
+  Chunk 0249  [00:16:34.02 -> 00:16:38.02]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen moving around, interacting with the adults
+    Justification: The child in the brown jacket is seen moving around, interacting with the adults
+  Chunk 0278  [00:18:32.81 -> 00:18:35.81]  HITTING OTHERS
+    Evidence:      A child wearing a yellow shirt enters the room
+    Justification: The child walks towards the table and interacts with the items on it, possibly h
+  Chunk 0282  [00:18:47.57 -> 00:18:47.87]  HITTING OTHERS
+    Evidence:      A child wearing a yellow shirt and blue pants enters the room
+    Justification: The child interacts with another person who is partially visible in the doorway
+  Chunk 0291  [00:19:24.49 -> 00:19:27.49]  HITTING OTHERS
+    Evidence:      A child wearing a blue shirt and jeans enters the room, followed by an adult in 
+    Justification: The child appears to be interacting with the adult, possibly hitting or pushing 
+  Chunk 0299  [00:19:57.00 -> 00:19:57.50]  SELF DIRECTED HIT
+    Evidence:      A child enters the room, walks towards the table, and sits down
+    Justification: The child is seen sitting on the floor, possibly hitting or scratching themselve
+  Chunk 0300  [00:19:59.62 -> 00:20:02.62]  SELF DIRECTED HIT
+    Evidence:      The child is seen moving around the room, interacting with the adults. The child
+    Justification: The child's actions are repetitive and focused on self-harm, which aligns with t
+  Chunk 0308  [00:20:35.68 -> 00:20:36.18]  HITTING OTHERS
+    Evidence:      A child wearing a green shirt and blue jeans enters the room
+    Justification: The child appears to be interacting with someone off-screen, possibly hitting or
+  Chunk 0315  [00:21:03.06 -> 00:21:03.26]  HITTING OTHERS
+    Evidence:      The child in the brown jacket raises their hand, possibly to get the attention o
+    Justification: The child in the brown jacket raises their hand, which could be interpreted as a
+  Chunk 0316  [00:21:04.69 -> 00:21:06.19]  HITTING OTHERS
+    Evidence:      The child in the brown jacket raises their arm and points towards the person in 
+    Justification: The child in the brown jacket raises their arm and points towards the person in 
+  Chunk 0317  [00:21:09.12 -> 00:21:11.52]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen moving their arms and body, indicating som
+    Justification: The child in the brown jacket is interacting with the person on the right, who i
+  Chunk 0318  [00:21:10.94 -> 00:21:16.94]  HITTING OTHERS
+    Evidence:      The child is seen moving their arms and body slightly, indicating some form of a
+    Justification: The child's movements suggest they might be interacting with the adults in a way
+  Chunk 0319  [00:21:18.77 -> 00:21:19.27]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen raising their hand, possibly to interact w
+    Justification: The child's action of raising their hand suggests they might be trying to hit or
+  Chunk 0326  [00:21:45.95 -> 00:21:46.95]  SCRATCHING
+    Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-sooth
+    Justification: The child's hand movements suggest they are scratching themselves
+  Chunk 0327  [00:21:46.08 -> 00:21:52.98]  SCRATCHING
+    Evidence:      The child is seen scratching their head and face throughout the video
+    Justification: 
+  Chunk 0328  [00:21:50.21 -> 00:21:56.21]  SCRATCHING
+    Evidence:      The child is seen scratching their head and face throughout the video
+    Justification: The child is repeatedly seen scratching their head and face, indicating a repeti
+  Chunk 0330  [00:22:01.50 -> 00:22:02.50]  SCRATCHING
+    Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-sooth
+    Justification: The child's hand movements suggest they are scratching themselves
+  Chunk 0331  [00:22:06.62 -> 00:22:07.62]  HITTING OTHERS
+    Evidence:      The child is leaning forward and appears to be engaged in an activity on the tab
+    Justification: The child's posture and focus suggest they are interacting with something or som
+  Chunk 0334  [00:22:19.01 -> 00:22:20.01]  SCRATCHING
+    Evidence:      The child in the brown jacket is seen moving their hands and body, possibly indi
+    Justification: The child's hand movements suggest they might be scratching themselves, which al
+  Chunk 0343  [00:22:53.14 -> 00:22:54.14]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen moving their arms and body, possibly indic
+    Justification: The child's movements and interactions suggest they are reaching out towards the
+  Chunk 0344  [00:22:55.27 -> 00:22:57.27]  HITTING OTHERS
+    Evidence:      The child in the gray shirt is seen moving their head and arm, possibly hitting 
+    Justification: The child in the gray shirt is seen moving their head and arm, possibly hitting 
+  Chunk 0346  [00:23:06.56 -> 00:23:07.56]  SELF DIRECTED HIT
+    Evidence:      The child is seen moving their hands and arms, possibly engaging in a self-direc
+    Justification: The child's movements are directed towards themselves, indicating a self-directe
+  Chunk 0357  [00:23:45.95 -> 00:23:52.95]  HITTING OTHERS
+    Evidence:      The child in the brown coat is seen moving their head and body, indicating some 
+    Justification: The child's movements and the adults' interactions suggest that the child might 
+  Chunk 0506  [00:33:47.23 -> 00:33:47.73]  HITTING OTHERS
+    Evidence:      A child wearing a green shirt and brown pants enters the room
+    Justification: The child is seen interacting with the person in the turquoise shirt, possibly h
+  Chunk 0508  [00:33:54.49 -> 00:33:55.49]  SELF DIRECTED HIT
+    Evidence:      The child is seen moving around the room, interacting with the adults and the ta
+    Justification: The child's actions, such as moving around and interacting with the table, sugge
+  Chunk 0513  [00:34:14.18 -> 00:34:15.08]  SCRATCHING
+    Evidence:      The child in the brown jacket is sitting on a blue chair, facing away from the c
+    Justification: The child's posture and hand movements suggest they might be scratching or inter
+  Chunk 0526  [00:35:05.81 -> 00:35:07.81]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen holding a small object, possibly a toy or 
+    Justification: The child in the brown jacket is interacting with the adult in the gray sweater,
+  Chunk 0527  [00:35:07.94 -> 00:35:11.94]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen moving their hands and arms, possibly indi
+    Justification: The child's movements and the adults' interactions suggest that the child might 
+  Chunk 0533  [00:35:33.19 -> 00:35:35.59]  HITTING OTHERS
+    Evidence:      The child in the brown jacket raises their hand and places it on the back of the
+    Justification: The child's action of placing their hand on the adult's back and the subsequent 
+  Chunk 0538  [00:35:53.36 -> 00:35:55.36]  HITTING OTHERS
+    Evidence:      The child in the gray shirt is seen placing their hands on the shoulders of the 
+    Justification: The child in the gray shirt is seen placing their hands on the shoulders of the 
+  Chunk 0551  [00:36:44.01 -> 00:36:47.01]  HITTING OTHERS
+    Evidence:      The child is seen holding a white object, possibly a cup or container, and appea
+    Justification: The child's actions suggest they are interacting with someone or something off-s
+  Chunk 0627  [00:41:46.82 -> 00:41:52.82]  HAND BITING
+    Evidence:      The child is engaged in an activity that involves leaning forward and interactin
+    Justification: The child's posture and the context suggest they might be biting their own hand 
+  Chunk 0636  [00:42:26.85 -> 00:42:27.25]  HAND BITING
+    Evidence:      The child is engaged in an activity with the adults, possibly involving their ha
+    Justification: The child's hands are visible and appear to be moving in a way that suggests the
+  Chunk 0653  [00:43:35.04 -> 00:43:35.44]  HITTING OTHERS
+    Evidence:      The child raises their arm
+    Justification: The child raises their arm, possibly to hit or gesture towards the adult on the 
+  Chunk 0654  [00:43:36.27 -> 00:43:37.37]  SELF DIRECTED HIT
+    Evidence:      The child is seen raising their arm and moving it in a circular motion, which is
+    Justification: The child's actions are focused on their own body, indicating they are hitting o
+  Chunk 0662  [00:44:08.36 -> 00:44:11.36]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen raising their arm and moving it around, po
+    Justification: The child's movements and the adults' interactions suggest that the child might 
+  Chunk 0665  [00:44:22.74 -> 00:44:23.74]  SELF DIRECTED HIT
+    Evidence:      The child is seen moving their hands and arms, possibly indicating a state of re
+    Justification: The child's movements and the adults' interactions suggest that the child might 
+  Chunk 0680  [00:45:23.68 -> 00:45:24.68]  HITTING OTHERS
+    Evidence:      The child in the gray shirt is seen hitting the other child
+    Justification: The child in the gray shirt is seen hitting the other child
+  Chunk 0681  [00:45:27.81 -> 00:45:28.81]  HITTING OTHERS
+    Evidence:      The child in the brown hoodie is seen bending forward, possibly engaging with so
+    Justification: The child in the brown hoodie appears to be hitting or pushing the child in the 

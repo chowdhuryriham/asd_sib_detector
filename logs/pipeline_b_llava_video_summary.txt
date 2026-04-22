@@ -1,0 +1,70 @@
+============================================================
+BEHAVIOUR DETECTION SUMMARY -- LLaVA-Video-72B-Qwen2
+============================================================
+Video   : /raid/aio469/asd_sib_detector/data/raw/lab_videos/input_01.mp4
+Duration: 00:45:56.27  (2756.3s)
+FPS     : 30.00
+Chunks  : 394  (32 frames each)
+
+  8 interval(s) detected  (71.1s total, 2.6% of video)
+
+  Label breakdown:
+    hand_biting          1 interval(s)
+    hitting_others       2 interval(s)
+    scratching           5 interval(s)
+
+  Intervals (global time):
+    [00:20:52.37 -> 00:21:02.97]  SCRATCHING  (10.6s)
+      Evidence:      The child in the brown jacket is leaning forward and appears to be scratching th
+      Justification: The child's hand is raised to their head, indicating they are scratching.
+    [00:21:03.57 -> 00:21:08.57]  HITTING OTHERS  (5.0s)
+      Evidence:      The child in the brown jacket is seen hitting the other child in the teal shirt.
+      Justification: The child in the brown jacket extends their arm and makes contact with the other
+    [00:22:08.83 -> 00:22:20.00]  SCRATCHING  (11.2s)
+      Evidence:      The child is sitting with their head down and appears to be scratching their hea
+      Justification: The child is seen scratching their head throughout the video.
+    [00:27:42.40 -> 00:27:47.40]  HITTING OTHERS  (5.0s)
+      Evidence:      The child is seen hitting the adult in the room.
+      Justification: The child's behavior of hitting the adult is observed between these time interva
+    [00:34:03.87 -> 00:34:13.97]  SCRATCHING  (10.1s)
+      Evidence:      The child in the gray shirt is seen scratching their head.
+      Justification: The child's hand movements indicate they are scratching their scalp.
+    [00:40:28.30 -> 00:40:34.50]  SCRATCHING  (6.2s)
+      Evidence:      The child is seen scratching their head.
+      Justification: The child is observed scratching their head throughout the video.
+    [00:40:34.50 -> 00:40:46.00]  HAND BITING  (11.5s)
+      Evidence:      The child is seen biting his hand while standing near the door.
+      Justification: The child is consistently biting his hand throughout the video.
+    [00:45:42.43 -> 00:45:54.00]  SCRATCHING  (11.6s)
+      Evidence:      The child is seen scratching their head with their hand.
+      Justification: The child is using their hand to scratch their head, which is a behavior classif
+
+------------------------------------------------------------
+CHUNK-LEVEL DETECTIONS (9):
+  Chunk 0179  [00:20:52.35 -> 00:21:02.98]  SCRATCHING
+    Evidence:      The child in the brown jacket is leaning forward and appears to be scratching th
+    Justification: The child's hand is raised to their head, indicating they are scratching.
+  Chunk 0180  [00:21:03.56 -> 00:21:08.56]  HITTING OTHERS
+    Evidence:      The child in the brown jacket is seen hitting the other child in the teal shirt.
+    Justification: The child in the brown jacket extends their arm and makes contact with the other
+  Chunk 0190  [00:22:08.83 -> 00:22:20.00]  SCRATCHING
+    Evidence:      The child is sitting with their head down and appears to be scratching their hea
+    Justification: The child is seen scratching their head throughout the video.
+  Chunk 0237  [00:27:42.41 -> 00:27:47.41]  HITTING OTHERS
+    Evidence:      The child is seen hitting the adult in the room.
+    Justification: The child's behavior of hitting the adult is observed between these time interva
+  Chunk 0292  [00:34:03.87 -> 00:34:13.97]  SCRATCHING
+    Evidence:      The child in the gray shirt is seen scratching their head.
+    Justification: The child's hand movements indicate they are scratching their scalp.
+  Chunk 0347  [00:40:28.29 -> 00:40:38.99]  SCRATCHING
+    Evidence:      The child is seen scratching their head.
+    Justification: The child is observed scratching their head throughout the video.
+  Chunk 0348  [00:40:34.50 -> 00:40:46.00]  HAND BITING
+    Evidence:      The child is seen biting his hand while standing near the door.
+    Justification: The child is consistently biting his hand throughout the video.
+  Chunk 0392  [00:45:42.43 -> 00:45:54.00]  SCRATCHING
+    Evidence:      The child is seen scratching their head with their hand.
+    Justification: The child is using their hand to scratch their head, which is a behavior classif
+  Chunk 0393  [00:45:52.72 -> 00:45:53.72]  SCRATCHING
+    Evidence:      The child is seen scratching their head with their hand.
+    Justification: The child uses their hand to scratch their head, which is a common behavior asso

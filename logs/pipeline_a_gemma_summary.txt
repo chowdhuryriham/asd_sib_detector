@@ -1,0 +1,302 @@
+============================================================
+BEHAVIOUR DETECTION SUMMARY -- Gemma-4-31B
+============================================================
+Video   : /raid/aio469/asd_sib_detector/data/raw/lab_videos/input_01.mp4
+Duration: 00:45:56.27  (2756.3s)
+FPS     : 30.00
+Chunks  : 690
+
+  44 interval(s) detected  (101.1s total, 3.7% of video)
+
+  Label breakdown:
+    hand_biting          30 interval(s)
+    head_banging         2 interval(s)
+    hitting_others       9 interval(s)
+    scratching           3 interval(s)
+
+  Intervals (global time):
+    [00:08:04.57 -> 00:08:06.57]  HAND BITING  (2.0s)
+      Evidence:      A child sitting in a chair bites their own hand while two adults are present in 
+      Justification: The child is seen bringing their hand to their mouth and biting it while the adu
+    [00:09:43.77 -> 00:09:45.77]  HEAD BANGING  (2.0s)
+      Evidence:      A child in a brown jacket is sitting between two adults; around the 1-second mar
+      Justification: The child is seen repeatedly striking their own head with their hand, which fits
+    [00:09:46.87 -> 00:09:49.87]  HAND BITING  (3.0s)
+      Evidence:      A woman in a grey shirt is leaning over and holding a child's arm, preventing th
+      Justification: The child is attempting to bite their own hand, and the adult is intervening to 
+    [00:10:20.93 -> 00:10:21.93]  HITTING OTHERS  (1.0s)
+      Evidence:      The child patient is sitting in a blue chair and begins to hit the thigh of the 
+      Justification: The child is observed repeatedly hitting another person's leg, which fits the de
+    [00:10:28.13 -> 00:10:30.13]  HAND BITING  (2.0s)
+      Evidence:      The child patient sits between two adults and begins to bite their own hand star
+      Justification: The child puts their hand/fingers in their mouth and bites down on them.
+    [00:10:44.80 -> 00:10:45.80]  HAND BITING  (1.0s)
+      Evidence:      The child is sitting between two adults and brings their hand up to their mouth 
+      Justification: The child clearly places their hand in their mouth and bites it for approximatel
+    [00:11:21.07 -> 00:11:23.37]  SCRATCHING  (2.3s)
+      Evidence:      A child enters the room and begins scratching their head/scalp area while standi
+      Justification: The child is seen bringing their hand up to their head and scratching their scal
+    [00:13:24.23 -> 00:13:25.00]  HAND BITING  (0.8s)
+      Evidence:      A child patient is sitting in a blue chair, and towards the end of the video, th
+      Justification: The child is observed biting their own hand/fingers during the final second of t
+    [00:13:51.77 -> 00:13:52.77]  HAND BITING  (1.0s)
+      Evidence:      The child patient is seen leaning forward and bringing their hand up to their mo
+      Justification: The child clearly brings their hand to their mouth and engages in biting behavio
+    [00:14:48.97 -> 00:14:52.70]  HAND BITING  (3.7s)
+      Evidence:      The child patient leans forward and brings their hand to their mouth, biting the
+      Justification: The child is seen biting their own hand/fingers during the interaction.
+    [00:15:05.17 -> 00:15:05.67]  HITTING OTHERS  (0.5s)
+      Evidence:      The child patient is sitting in a chair between two adults, and at around 2 seco
+      Justification: The child's arm extends to strike the adult sitting next to them, which matches 
+    [00:15:11.73 -> 00:15:13.00]  HAND BITING  (1.3s)
+      Evidence:      The child patient is sitting between two adults, and as the video progresses, th
+      Justification: The child is observed bringing their hand/fingers to their mouth and biting them
+    [00:15:13.57 -> 00:15:17.00]  HITTING OTHERS  (3.4s)
+      Evidence:      The child patient in the brown jacket leans forward and begins to hit the person
+      Justification: The child is seen striking the person sitting in the blue chair with their hands
+    [00:15:59.27 -> 00:16:00.57]  HAND BITING  (1.3s)
+      Evidence:      The child patient is sitting at a table and brings their hand up to their mouth,
+      Justification: The child is seen biting their own hand/fingers during the first few seconds of 
+    [00:16:07.13 -> 00:16:13.00]  HAND BITING  (5.9s)
+      Evidence:      The child patient, wearing a brown jacket, is seen leaning forward and biting th
+      Justification: The child is consistently bringing their hand to their mouth and biting it throu
+    [00:19:58.50 -> 00:20:01.00]  HAND BITING  (2.5s)
+      Evidence:      A child enters the room and at approximately 4 seconds, brings their hand up to 
+      Justification: The child is seen bringing their hand to their mouth and biting it repeatedly th
+    [00:21:01.07 -> 00:21:04.07]  SCRATCHING  (3.0s)
+      Evidence:      The child patient, wearing a brown jacket, is seen scratching his head and scalp
+      Justification: The child uses his hand to scratch his own head/scalp area during the interactio
+    [00:21:04.80 -> 00:21:06.20]  HITTING OTHERS  (1.4s)
+      Evidence:      The child patient in the tan jacket raises their hand and hits the person sittin
+      Justification: The child is seen physically striking another person with their hand.
+    [00:21:23.50 -> 00:21:26.97]  SCRATCHING  (3.5s)
+      Evidence:      The child patient remains seated and begins scratching their head starting at 04
+      Justification: The child uses their hand to scratch their scalp/head for the remainder of the c
+    [00:21:29.00 -> 00:21:33.00]  HAND BITING  (4.0s)
+      Evidence:      A child is seated between two adults, and as the video progresses, the child rai
+      Justification: The child is observed bringing their hand to their mouth and biting it.
+    [00:21:34.00 -> 00:21:37.00]  HAND BITING  (3.0s)
+      Evidence:      The child patient is sitting between two adults and leans forward to bring their
+      Justification: The child clearly brings their hand to their mouth and bites their own fingers s
+    [00:22:07.27 -> 00:22:09.27]  HAND BITING  (2.0s)
+      Evidence:      The child patient is sitting in a blue chair and leans forward to bite their own
+      Justification: The child is clearly seen placing their hand in their mouth and biting it.
+    [00:22:20.63 -> 00:22:21.93]  HAND BITING  (1.3s)
+      Evidence:      The child patient, wearing a brown jacket, brings their hand to their mouth and 
+      Justification: The child is seen biting their own hand/fingers during the interaction.
+    [00:22:47.00 -> 00:22:48.00]  HAND BITING  (1.0s)
+      Evidence:      The child patient is sitting between two adults and puts their head down, appear
+      Justification: The child lowers their head and brings their hand to their mouth, exhibiting han
+    [00:22:55.27 -> 00:22:57.27]  HAND BITING  (2.0s)
+      Evidence:      The child, wearing a brown jacket, brings their hand up to their mouth and bites
+      Justification: The child is clearly seen bringing their hand to their mouth and biting their fi
+    [00:23:36.60 -> 00:23:41.00]  HAND BITING  (4.4s)
+      Evidence:      The child patient is seated between two adults and begins to bite their own hand
+      Justification: The child is clearly seen bringing their hand to their mouth and biting their fi
+    [00:27:45.10 -> 00:27:47.80]  HAND BITING  (2.7s)
+      Evidence:      The child patient is sitting in a chair and leans their head forward to bite the
+      Justification: The child puts their hand in their mouth and bites it for several seconds.
+    [00:35:32.90 -> 00:35:34.50]  HITTING OTHERS  (1.6s)
+      Evidence:      The child in the brown jacket reaches out and repeatedly hits the arm of the per
+      Justification: The child is seen striking another person with their hand, which fits the defini
+    [00:35:53.67 -> 00:35:54.97]  HITTING OTHERS  (1.3s)
+      Evidence:      At 0:02, the child in the brown jacket is hugged by the person in the grey shirt
+      Justification: The child repeatedly strikes the arm and shoulder of the person hugging them.
+    [00:36:08.57 -> 00:36:09.97]  HAND BITING  (1.4s)
+      Evidence:      The child in the brown jacket leans forward and repeatedly bites their own hand 
+      Justification: The child is clearly bringing their hand to their mouth and biting it for a seve
+    [00:40:28.70 -> 00:40:33.83]  HAND BITING  (5.1s)
+      Evidence:      A child enters the room with an adult and then brings their hand to their mouth 
+      Justification: The child is observed biting their own hand starting around the 2.5-second mark 
+    [00:40:34.50 -> 00:40:42.13]  HAND BITING  (7.6s)
+      Evidence:      The child is seen biting their own hand while being held by an adult.
+      Justification: The child consistently holds their hand to their mouth and bites their fingers t
+    [00:41:03.43 -> 00:41:05.43]  HITTING OTHERS  (2.0s)
+      Evidence:      The child patient reaches out and hits the woman's chest several times throughou
+      Justification: The child is observed repeatedly hitting the woman sitting in front of them.
+    [00:41:16.17 -> 00:41:16.60]  HITTING OTHERS  (0.4s)
+      Evidence:      The child patient sits facing a woman, and at around 4.5 seconds, he raises his 
+      Justification: The child explicitly reaches out and strikes the other person's arm.
+    [00:41:16.60 -> 00:41:17.90]  HEAD BANGING  (1.3s)
+      Evidence:      The child patient repeatedly raises their arm and hits their own forehead with t
+      Justification: The child is hitting their own head with their hand, which fits the definition o
+    [00:41:47.40 -> 00:41:49.80]  HAND BITING  (2.4s)
+      Evidence:      The child patient is sitting between two adults and repeatedly brings their hand
+      Justification: The child is observed biting their own hand/fingers during the first few seconds
+    [00:41:51.93 -> 00:41:53.93]  HAND BITING  (2.0s)
+      Evidence:      The child patient is seen leaning forward and bringing their hand to their mouth
+      Justification: The child repeatedly puts their fingers into their mouth and bites them during t
+    [00:42:03.97 -> 00:42:07.77]  HAND BITING  (3.8s)
+      Evidence:      The child patient is seen leaning forward and biting their own hand while the ad
+      Justification: The child is clearly biting their hand/fingers during this time interval.
+    [00:43:19.37 -> 00:43:20.97]  HAND BITING  (1.6s)
+      Evidence:      The child patient sits between two adults, and towards the end of the video, he 
+      Justification: The child is seen bringing his hand to his mouth and biting his fingers, which m
+    [00:43:30.00 -> 00:43:33.00]  HAND BITING  (3.0s)
+      Evidence:      A child in a tan jacket is sitting between two adults and begins biting their ow
+      Justification: The child is observed placing their hand/fingers in their mouth and biting them.
+    [00:43:36.37 -> 00:43:36.97]  HITTING OTHERS  (0.6s)
+      Evidence:      The child patient reaches out and hits the woman sitting next to them on the arm
+      Justification: The child is seen striking the person next to them multiple times.
+    [00:44:08.47 -> 00:44:09.47]  HAND BITING  (1.0s)
+      Evidence:      The child patient is seen raising their hand toward their face and appears to bi
+      Justification: The child brings their hand to their mouth and bites down on their fingers, fitt
+    [00:45:02.00 -> 00:45:04.00]  HAND BITING  (2.0s)
+      Evidence:      The child patient, sitting in the middle, leans forward and bites their own hand
+      Justification: The child is observed bringing their hand to their mouth and biting it.
+    [00:45:27.00 -> 00:45:29.00]  HAND BITING  (2.0s)
+      Evidence:      The child patient is sitting in a blue chair and begins to lean forward and brin
+      Justification: The child is seen bringing their hand to their mouth and biting down on their ow
+
+------------------------------------------------------------
+CHUNK-LEVEL DETECTIONS (50):
+  Chunk 0121  [00:08:04.55 -> 00:08:06.55]  HAND BITING
+    Evidence:      A child sitting in a chair bites their own hand while two adults are present in 
+    Justification: The child is seen bringing their hand to their mouth and biting it while the adu
+  Chunk 0146  [00:09:43.75 -> 00:09:45.75]  HEAD BANGING
+    Evidence:      A child in a brown jacket is sitting between two adults; around the 1-second mar
+    Justification: The child is seen repeatedly striking their own head with their hand, which fits
+  Chunk 0147  [00:09:46.88 -> 00:09:49.88]  HAND BITING
+    Evidence:      A woman in a grey shirt is leaning over and holding a child's arm, preventing th
+    Justification: The child is attempting to bite their own hand, and the adult is intervening to 
+  Chunk 0155  [00:10:20.93 -> 00:10:21.93]  HITTING OTHERS
+    Evidence:      The child patient is sitting in a blue chair and begins to hit the thigh of the 
+    Justification: The child is observed repeatedly hitting another person's leg, which fits the de
+  Chunk 0157  [00:10:28.14 -> 00:10:30.14]  HAND BITING
+    Evidence:      The child patient sits between two adults and begins to bite their own hand star
+    Justification: The child puts their hand/fingers in their mouth and bites down on them.
+  Chunk 0161  [00:10:44.79 -> 00:10:45.79]  HAND BITING
+    Evidence:      The child is sitting between two adults and brings their hand up to their mouth 
+    Justification: The child clearly places their hand in their mouth and bites it for approximatel
+  Chunk 0170  [00:11:21.07 -> 00:11:23.37]  SCRATCHING
+    Evidence:      A child enters the room and begins scratching their head/scalp area while standi
+    Justification: The child is seen bringing their hand up to their head and scratching their scal
+  Chunk 0200  [00:13:24.24 -> 00:13:25.00]  HAND BITING
+    Evidence:      A child patient is sitting in a blue chair, and towards the end of the video, th
+    Justification: The child is observed biting their own hand/fingers during the final second of t
+  Chunk 0208  [00:13:51.75 -> 00:13:52.75]  HAND BITING
+    Evidence:      The child patient is seen leaning forward and bringing their hand up to their mo
+    Justification: The child clearly brings their hand to their mouth and engages in biting behavio
+  Chunk 0222  [00:14:48.96 -> 00:14:51.76]  HAND BITING
+    Evidence:      The child patient leans forward and brings their hand to their mouth, biting the
+    Justification: The child is seen biting their own hand/fingers during the interaction.
+  Chunk 0223  [00:14:50.69 -> 00:14:52.69]  HAND BITING
+    Evidence:      The child is sitting between two adults and puts their hand in their mouth, biti
+    Justification: The child is seen biting their own fingers/hand during the start of the video.
+  Chunk 0226  [00:15:05.17 -> 00:15:05.67]  HITTING OTHERS
+    Evidence:      The child patient is sitting in a chair between two adults, and at around 2 seco
+    Justification: The child's arm extends to strike the adult sitting next to them, which matches 
+  Chunk 0227  [00:15:11.73 -> 00:15:13.00]  HAND BITING
+    Evidence:      The child patient is sitting between two adults, and as the video progresses, th
+    Justification: The child is observed bringing their hand/fingers to their mouth and biting them
+  Chunk 0228  [00:15:13.56 -> 00:15:15.66]  HITTING OTHERS
+    Evidence:      The child patient in the brown jacket leans forward and begins to hit the person
+    Justification: The child is seen striking the person sitting in the blue chair with their hands
+  Chunk 0229  [00:15:15.49 -> 00:15:16.99]  HITTING OTHERS
+    Evidence:      The child in the brown jacket repeatedly hits the arm of the person in the teal 
+    Justification: The child is seen striking the other person's arm multiple times before settling
+  Chunk 0240  [00:15:59.28 -> 00:16:00.58]  HAND BITING
+    Evidence:      The child patient is sitting at a table and brings their hand up to their mouth,
+    Justification: The child is seen biting their own hand/fingers during the first few seconds of 
+  Chunk 0242  [00:16:07.14 -> 00:16:13.00]  HAND BITING
+    Evidence:      The child patient, wearing a brown jacket, is seen leaning forward and biting th
+    Justification: The child is consistently bringing their hand to their mouth and biting it throu
+  Chunk 0299  [00:19:58.50 -> 00:20:01.00]  HAND BITING
+    Evidence:      A child enters the room and at approximately 4 seconds, brings their hand up to 
+    Justification: The child is seen bringing their hand to their mouth and biting it repeatedly th
+  Chunk 0315  [00:21:01.06 -> 00:21:04.06]  SCRATCHING
+    Evidence:      The child patient, wearing a brown jacket, is seen scratching his head and scalp
+    Justification: The child uses his hand to scratch his own head/scalp area during the interactio
+  Chunk 0316  [00:21:04.79 -> 00:21:06.19]  HITTING OTHERS
+    Evidence:      The child patient in the tan jacket raises their hand and hits the person sittin
+    Justification: The child is seen physically striking another person with their hand.
+  Chunk 0320  [00:21:23.50 -> 00:21:25.00]  SCRATCHING
+    Evidence:      The child patient remains seated and begins scratching their head starting at 04
+    Justification: The child uses their hand to scratch their scalp/head for the remainder of the c
+  Chunk 0321  [00:21:23.76 -> 00:21:26.96]  SCRATCHING
+    Evidence:      The child patient raises their right hand to their head and appears to be scratc
+    Justification: The child's hand is seen repeatedly moving against their own scalp in a scratchi
+  Chunk 0322  [00:21:28.99 -> 00:21:32.99]  HAND BITING
+    Evidence:      A child is seated between two adults, and as the video progresses, the child rai
+    Justification: The child is observed bringing their hand to their mouth and biting it.
+  Chunk 0323  [00:21:34.02 -> 00:21:37.00]  HAND BITING
+    Evidence:      The child patient is sitting between two adults and leans forward to bring their
+    Justification: The child clearly brings their hand to their mouth and bites their own fingers s
+  Chunk 0332  [00:22:07.25 -> 00:22:09.25]  HAND BITING
+    Evidence:      The child patient is sitting in a blue chair and leans forward to bite their own
+    Justification: The child is clearly seen placing their hand in their mouth and biting it.
+  Chunk 0335  [00:22:20.64 -> 00:22:21.94]  HAND BITING
+    Evidence:      The child patient, wearing a brown jacket, brings their hand to their mouth and 
+    Justification: The child is seen biting their own hand/fingers during the interaction.
+  Chunk 0342  [00:22:47.02 -> 00:22:48.02]  HAND BITING
+    Evidence:      The child patient is sitting between two adults and puts their head down, appear
+    Justification: The child lowers their head and brings their hand to their mouth, exhibiting han
+  Chunk 0344  [00:22:55.27 -> 00:22:57.27]  HAND BITING
+    Evidence:      The child, wearing a brown jacket, brings their hand up to their mouth and bites
+    Justification: The child is clearly seen bringing their hand to their mouth and biting their fi
+  Chunk 0354  [00:23:36.62 -> 00:23:41.00]  HAND BITING
+    Evidence:      The child patient is seated between two adults and begins to bite their own hand
+    Justification: The child is clearly seen bringing their hand to their mouth and biting their fi
+  Chunk 0416  [00:27:45.12 -> 00:27:47.82]  HAND BITING
+    Evidence:      The child patient is sitting in a chair and leans their head forward to bite the
+    Justification: The child puts their hand in their mouth and bites it for several seconds.
+  Chunk 0533  [00:35:32.89 -> 00:35:34.49]  HITTING OTHERS
+    Evidence:      The child in the brown jacket reaches out and repeatedly hits the arm of the per
+    Justification: The child is seen striking another person with their hand, which fits the defini
+  Chunk 0538  [00:35:53.66 -> 00:35:54.96]  HITTING OTHERS
+    Evidence:      At 0:02, the child in the brown jacket is hugged by the person in the grey shirt
+    Justification: The child repeatedly strikes the arm and shoulder of the person hugging them.
+  Chunk 0542  [00:36:08.57 -> 00:36:09.97]  HAND BITING
+    Evidence:      The child in the brown jacket leans forward and repeatedly bites their own hand 
+    Justification: The child is clearly bringing their hand to their mouth and biting it for a seve
+  Chunk 0607  [00:40:28.71 -> 00:40:33.00]  HAND BITING
+    Evidence:      A child enters the room with an adult and then brings their hand to their mouth 
+    Justification: The child is observed biting their own hand starting around the 2.5-second mark 
+  Chunk 0608  [00:40:30.34 -> 00:40:33.84]  HAND BITING
+    Evidence:      The child is seen biting their own hand and fingers while standing near the door
+    Justification: The child's hand is placed in their mouth, and they are actively biting their fi
+  Chunk 0609  [00:40:34.50 -> 00:40:41.00]  HAND BITING
+    Evidence:      The child is seen biting their own hand while being held by an adult.
+    Justification: The child consistently holds their hand to their mouth and bites their fingers t
+  Chunk 0610  [00:40:38.62 -> 00:40:42.12]  HAND BITING
+    Evidence:      The child patient repeatedly puts their hand/fingers in their mouth and bites th
+    Justification: The child is seen biting their own hand and fingers throughout the first few sec
+  Chunk 0616  [00:41:03.42 -> 00:41:05.42]  HITTING OTHERS
+    Evidence:      The child patient reaches out and hits the woman's chest several times throughou
+    Justification: The child is observed repeatedly hitting the woman sitting in front of them.
+  Chunk 0618  [00:41:16.18 -> 00:41:16.98]  HITTING OTHERS
+    Evidence:      The child patient sits facing a woman, and at around 4.5 seconds, he raises his 
+    Justification: The child explicitly reaches out and strikes the other person's arm.
+  Chunk 0619  [00:41:16.61 -> 00:41:17.91]  HEAD BANGING
+    Evidence:      The child patient repeatedly raises their arm and hits their own forehead with t
+    Justification: The child is hitting their own head with their hand, which fits the definition o
+  Chunk 0626  [00:41:47.79 -> 00:41:48.39]  HAND BITING
+    Evidence:      The child patient is seated between two adults; at around 0:05, the adult on the
+    Justification: The child brings their hand to their mouth and bites it.
+  Chunk 0627  [00:41:47.42 -> 00:41:49.82]  HAND BITING
+    Evidence:      The child patient is sitting between two adults and repeatedly brings their hand
+    Justification: The child is observed biting their own hand/fingers during the first few seconds
+  Chunk 0628  [00:41:51.94 -> 00:41:53.94]  HAND BITING
+    Evidence:      The child patient is seen leaning forward and bringing their hand to their mouth
+    Justification: The child repeatedly puts their fingers into their mouth and bites them during t
+  Chunk 0631  [00:42:03.96 -> 00:42:07.76]  HAND BITING
+    Evidence:      The child patient is seen leaning forward and biting their own hand while the ad
+    Justification: The child is clearly biting their hand/fingers during this time interval.
+  Chunk 0649  [00:43:19.38 -> 00:43:20.98]  HAND BITING
+    Evidence:      The child patient sits between two adults, and towards the end of the video, he 
+    Justification: The child is seen bringing his hand to his mouth and biting his fingers, which m
+  Chunk 0652  [00:43:30.02 -> 00:43:33.00]  HAND BITING
+    Evidence:      A child in a tan jacket is sitting between two adults and begins biting their ow
+    Justification: The child is observed placing their hand/fingers in their mouth and biting them.
+  Chunk 0654  [00:43:36.37 -> 00:43:36.97]  HITTING OTHERS
+    Evidence:      The child patient reaches out and hits the woman sitting next to them on the arm
+    Justification: The child is seen striking the person next to them multiple times.
+  Chunk 0662  [00:44:08.46 -> 00:44:09.46]  HAND BITING
+    Evidence:      The child patient is seen raising their hand toward their face and appears to bi
+    Justification: The child brings their hand to their mouth and bites down on their fingers, fitt
+  Chunk 0675  [00:45:02.01 -> 00:45:04.01]  HAND BITING
+    Evidence:      The child patient, sitting in the middle, leans forward and bites their own hand
+    Justification: The child is observed bringing their hand to their mouth and biting it.
+  Chunk 0681  [00:45:27.01 -> 00:45:29.00]  HAND BITING
+    Evidence:      The child patient is sitting in a blue chair and begins to lean forward and brin
+    Justification: The child is seen bringing their hand to their mouth and biting down on their ow
