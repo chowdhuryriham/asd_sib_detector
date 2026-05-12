@@ -1,19 +1,32 @@
-# Install from source — required for latest model support
-# pip install git+https://github.com/huggingface/transformers.git
-
+# Core (all platforms)
+# NOTE: install transformers from source for latest model support:
+#   pip install git+https://github.com/huggingface/transformers.git
 accelerate>=1.13.0
 opencv-python>=4.13.0
 static-ffmpeg>=3.0
 Pillow>=12.0.0
 numpy>=1.17
 
-# Pipeline E (LLaVAction)
-# pip install git+https://github.com/AdaptiveMotorControlLab/LLaVAction.git
+# PyTorch is assumed pre-installed (NGC container on DGX Spark, or
+# matching the system CUDA on h220six). If not, install per
+# https://pytorch.org/get-started/locally/ before pip-installing this file.
+# torch>=2.4
 
-# Pipeline F (PLM)
+# Pipeline D (Phi-4)
+soundfile
+
+# Pipeline E (LLaVAction)
+# Also requires the LLaVAction package itself:
+#   pip install git+https://github.com/AdaptiveMotorControlLab/LLaVAction.git
+
+# Pipeline F (Perception-LM)
 timm>=1.0.0
 av>=17.0.0
-soundfile  # Phi-4 only
 
-# For h220six (x86_64) only — no ARM64 wheel
-# decord>=0.6.0  -- replaced by OpenCV on DGX Spark ARM64
+# Dataset download (used by download_asbd_dataset.py to fetch YouTube clips)
+yt-dlp>=2024.0.0
+
+# Platform-specific
+# x86_64 only — no ARM64 wheel. On ARM64 (DGX Spark) the pipelines fall
+# back to OpenCV for video decoding.
+decord>=0.6.0; platform_machine != "aarch64"

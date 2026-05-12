@@ -12,8 +12,18 @@ outputs/*/chunks/
 outputs/*/chunk_debug_frames/
 outputs/*/*.mp4
 
-# Logs can be optionally excluded if large
-# logs/
+# Logs (large, regenerable)
+logs/
+
+# Eval outputs (large, regenerable). Keep tables/JSON tracked elsewhere if needed.
+outputs/
+
+# Datasets (downloaded videos, large)
+data/
+
+# Local Claude / spreadsheet noise
+.claude/
+*.xlsx
 
 # Python cache
 __pycache__/
